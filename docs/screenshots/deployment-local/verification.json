@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "base": "http://localhost:3020/our-story",
+  "preview": "http://localhost:3021/our-story",
+  "checks": [
+    "desktop: gated HTML, API, no-cache, resources and layout",
+    "desktop: prefixed images, native audio, player and external JSON letter",
+    "landscape: gated HTML, API, no-cache, resources and layout",
+    "landscape: prefixed images, native audio, player and external JSON letter",
+    "mobile: gated HTML, API, no-cache, resources and layout",
+    "mobile: prefixed images, native audio, player and external JSON letter"
+  ],
+  "errors": []
+}

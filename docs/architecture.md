@@ -51,3 +51,11 @@ app/page.tsx（服务端）
 ## 技术资料
 
 安装/服务端边界依据项目内 `node_modules/next/dist/docs/`，以及 [Next.js 官方安装指南](https://nextjs.org/docs/app/getting-started/installation)。动画清理遵循 [GSAP context](https://gsap.com/docs/v3/GSAP/gsap.context/)。多尺寸模拟使用 [Playwright emulation](https://playwright.dev/docs/emulation)；模拟浏览器不等于真机。
+
+## Phase 4：终幕与首映门禁
+
+`BirthdayFinale` 承接最后有照片章节：可暂停/跳过的 GSAP 收卷时间线，随后进入手动阅读与片尾状态。相同音频控制器跨终幕和重访复用；GSAP context 在退出时清理。`finale.ts` 提供旧内容的缺省文案，新内容由 JSON 的 copy 覆盖。
+
+首页与 `/api/premiere` 均动态读取服务端内容。`premiere-server.ts` 使用 server-only，只以服务端时间判断开放；关闭时首页仅向客户端传递标题、邀请文案和时间状态，不传章节/生日信。浏览器以 performance.now 估算显示，归零仍需服务器确认；失败与配置错误保持关闭。仅服务环境变量 `PREMIERE_PREVIEW=1` 支持作者预览，不接受 URL、请求头或客户端时钟绕过。
+
+门禁不是私密对象存储授权；当前 public 目录中的演示图仍可通过路径访问。真实照片的私有桶、签名 URL、Auth/RLS 与管理员权限在 Phase 5 统一实现。详见 [首映配置](premiere-guide.md)。

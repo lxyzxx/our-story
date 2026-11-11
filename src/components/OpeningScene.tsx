@@ -1,4 +1,5 @@
 import type { ArchiveContent } from '@/lib/types';
+import { finaleCopy } from '@/lib/finale';
 import { Icon } from './Icons';
 export function OpeningScene({
   content,
@@ -6,13 +7,16 @@ export function OpeningScene({
   ready,
   completed = false,
   onReplay,
+  onLetter,
 }: {
   content: ArchiveContent;
   onBegin: () => void;
   ready: boolean;
   completed?: boolean;
   onReplay?: () => void;
+  onLetter?: () => void;
 }) {
+  const copy = finaleCopy(content.finale);
   return (
     <section className="opening" aria-labelledby="opening-title">
       <div className="opening-light" />
@@ -48,6 +52,19 @@ export function OpeningScene({
             <button className="text-button" disabled={!ready} onClick={onBegin}>
               {content.player.freeBrowse}
             </button>
+            {onLetter && (
+              <>
+                <span>/</span>
+                <button
+                  data-finale-entry
+                  className="text-button"
+                  disabled={!ready}
+                  onClick={onLetter}
+                >
+                  {copy.viewLetter}
+                </button>
+              </>
+            )}
           </div>
         )}
       </div>

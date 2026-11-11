@@ -27,7 +27,16 @@ export function MusicPlayer({
   const absent = !source;
   const retry = status === 'blocked' || status === 'error';
   return (
-    <div className="music-control">
+    <div
+      className="music-control"
+      onKeyDown={(e) => {
+        if (open && e.key === 'Escape') {
+          e.preventDefault();
+          e.stopPropagation();
+          closePanel();
+        }
+      }}
+    >
       <button
         className="sound-button"
         aria-label={absent ? '音乐尚未配置' : retry ? '重新播放音乐' : muted ? '开启音乐' : '静音'}
@@ -60,16 +69,7 @@ export function MusicPlayer({
         </span>
       )}
       {open && (
-        <div
-          className="music-panel"
-          onKeyDown={(e) => {
-            if (e.key === 'Escape') {
-              e.preventDefault();
-              e.stopPropagation();
-              closePanel();
-            }
-          }}
-        >
+        <div className="music-panel">
           <div>
             <span>背景音乐</span>
             <button

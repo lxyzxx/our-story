@@ -31,12 +31,16 @@
 
 将照片放到 `public/images/` 仅适合本地原型与确认方向；真实网站应走受控存储，不将私密照片直接提交到公开代码仓库。`width`、`height` 填原始方向校正后的实际尺寸。展示窗使用 contain 保留构图。
 
-`music.archive` 可填同源有权使用的文件路径，进入后才尝试播放，失败不阻塞浏览。`music.opening` 与章节 `music` 已接入场景换曲及音量面板；`music.finale` 留待 Phase 4。共享音频对象保证设置跨场景保留。
+`music.archive` 可填同源有权使用的文件路径，进入后才尝试播放，失败不阻塞浏览。`music.opening` 与章节 `music` 已接入场景换曲及音量面板；`music.finale` 用于生日终幕。共享音频对象保证设置跨场景保留。
 
 ## 演示素材
 
-四张自然风景是公开图库示例，不代表两人的经历；第一段故事是明确标识的阅读排版说明，其余为空。来源与许可见 [assets.md](assets.md)。请不要把示例标题、风景或默认英文署名当作已经确认的私人内容。
+演示自然风景是公开图库示例，不代表两人的经历；第一段故事是明确标识的阅读排版说明，其余为空。来源与许可见 [assets.md](assets.md)。请不要把示例标题、风景或默认英文署名当作已经确认的私人内容。
 
 ## Phase 3 放映配置
 
 `player` 对象集中管理播放/阅读/字幕卡动作文案与 `frameSeconds`；当前默认每张 8 秒。章节可独立设置 `music`。服务器设置 `ARCHIVE_CONTENT_FILE` 可加载同结构外部 JSON，不从 URL 接受路径。更多操作、进度边界与隔离测试见 [player-guide.md](player-guide.md)。
+
+## 首映与生日信
+
+当前首映设定为北京时间 **2027-02-07 00:00**；`premiere.enabled` 控制是否启用，`opensAt` 必须带明确时区。`finale.letter` 填亲笔信，空行分段；`signature`、`date`、`credit`、`starring` 填署名、信件日期、作者与主演。`finale.copy` 管理祝福、终幕字幕和按钮，`premiere.copy` 管理邀请函文字。完整样例及本机预览见 [premiere-guide.md](premiere-guide.md)。后台配置界面将在 Phase 5 接入，当前手动编辑服务端 JSON。

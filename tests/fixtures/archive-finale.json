@@ -1,0 +1,123 @@
+{
+  "title": "OUR STORY",
+  "subtitle": "A FILM ABOUT US",
+  "starring": "You & Me",
+  "heading": "Some things are",
+  "headingEmphasis": "worth keeping.",
+  "dedication": "献给你，和我们一起走过的每一个平凡日子。",
+  "opening": {
+    "begin": "BEGIN OUR STORY",
+    "skip": "跳过片头",
+    "invitation": "一场只属于我们的私人放映",
+    "rotate": "横过手机，让回忆铺满银幕。",
+    "portrait": "继续竖屏浏览"
+  },
+  "workbench": {
+    "title": "THE FILM ARCHIVE",
+    "select": "选一卷胶片，打开一段时光。",
+    "touchOpen": "再次轻触，展开胶片",
+    "back": "返回工作台",
+    "note": "For all the little things,\nand all the years to come.",
+    "signature": "Always, you & me"
+  },
+  "music": {
+    "opening": "/audio/opening-test.wav",
+    "archive": "/audio/archive-test.wav",
+    "finale": "/audio/finale-test.wav"
+  },
+  "finale": {
+    "letter": "长信排版与安全测试。这不是私人信件。\n\n第1段排版样本。这里用于验证中文分段、滚动阅读与屏幕旋转。阅读不会自动消失，也不要求读者赶在下一幕之前读完。阅读不会自动消失，也不要求读者赶在下一幕之前读完。阅读不会自动消失，也不要求读者赶在下一幕之前读完。阅读不会自动消失，也不要求读者赶在下一幕之前读完。\n\n第2段排版样本。这里用于验证中文分段、滚动阅读与屏幕旋转。阅读不会自动消失，也不要求读者赶在下一幕之前读完。阅读不会自动消失，也不要求读者赶在下一幕之前读完。阅读不会自动消失，也不要求读者赶在下一幕之前读完。阅读不会自动消失，也不要求读者赶在下一幕之前读完。\n\n第3段排版样本。这里用于验证中文分段、滚动阅读与屏幕旋转。阅读不会自动消失，也不要求读者赶在下一幕之前读完。阅读不会自动消失，也不要求读者赶在下一幕之前读完。阅读不会自动消失，也不要求读者赶在下一幕之前读完。阅读不会自动消失，也不要求读者赶在下一幕之前读完。\n\n第4段排版样本。这里用于验证中文分段、滚动阅读与屏幕旋转。阅读不会自动消失，也不要求读者赶在下一幕之前读完。阅读不会自动消失，也不要求读者赶在下一幕之前读完。阅读不会自动消失，也不要求读者赶在下一幕之前读完。阅读不会自动消失，也不要求读者赶在下一幕之前读完。\n\n第5段排版样本。这里用于验证中文分段、滚动阅读与屏幕旋转。阅读不会自动消失，也不要求读者赶在下一幕之前读完。阅读不会自动消失，也不要求读者赶在下一幕之前读完。阅读不会自动消失，也不要求读者赶在下一幕之前读完。阅读不会自动消失，也不要求读者赶在下一幕之前读完。\n\n第6段排版样本。这里用于验证中文分段、滚动阅读与屏幕旋转。阅读不会自动消失，也不要求读者赶在下一幕之前读完。阅读不会自动消失，也不要求读者赶在下一幕之前读完。阅读不会自动消失，也不要求读者赶在下一幕之前读完。阅读不会自动消失，也不要求读者赶在下一幕之前读完。\n\n第7段排版样本。这里用于验证中文分段、滚动阅读与屏幕旋转。阅读不会自动消失，也不要求读者赶在下一幕之前读完。阅读不会自动消失，也不要求读者赶在下一幕之前读完。阅读不会自动消失，也不要求读者赶在下一幕之前读完。阅读不会自动消失，也不要求读者赶在下一幕之前读完。\n\n第8段排版样本。这里用于验证中文分段、滚动阅读与屏幕旋转。阅读不会自动消失，也不要求读者赶在下一幕之前读完。阅读不会自动消失，也不要求读者赶在下一幕之前读完。阅读不会自动消失，也不要求读者赶在下一幕之前读完。阅读不会自动消失，也不要求读者赶在下一幕之前读完。\n\n第9段排版样本。这里用于验证中文分段、滚动阅读与屏幕旋转。阅读不会自动消失，也不要求读者赶在下一幕之前读完。阅读不会自动消失，也不要求读者赶在下一幕之前读完。阅读不会自动消失，也不要求读者赶在下一幕之前读完。阅读不会自动消失，也不要求读者赶在下一幕之前读完。\n\n第10段排版样本。这里用于验证中文分段、滚动阅读与屏幕旋转。阅读不会自动消失，也不要求读者赶在下一幕之前读完。阅读不会自动消失，也不要求读者赶在下一幕之前读完。阅读不会自动消失，也不要求读者赶在下一幕之前读完。阅读不会自动消失，也不要求读者赶在下一幕之前读完。\n\n<script>window.__letterExecuted=true</script>",
+    "credit": "测试署名 · 非真实身份",
+    "starring": "测试主角甲 & 测试主角乙",
+    "signature": "排版测试署名",
+    "date": "",
+    "copy": {
+      "sceneTitle": "生日终幕",
+      "question": "THE END?",
+      "answer": "NO.",
+      "continued": "TO BE CONTINUED...",
+      "title": "Happy birthday.",
+      "dedication": "愿接下来的每一帧，都有你。",
+      "letterTitle": "A letter for you.",
+      "letterLabel": "A LETTER TO KEEP",
+      "emptyLetter": "这封信，等你亲手写下。",
+      "viewCredits": "看看片尾字幕",
+      "viewLetter": "重读生日信",
+      "creditsTitle": "Our story continues.",
+      "byLabel": "A FILM BY",
+      "starringLabel": "STARRING",
+      "loveLine": "MADE WITH LOVE",
+      "unsigned": "待填写署名",
+      "returnArchive": "REVISIT OUR MEMORIES",
+      "skipIntro": "跳过终幕片头",
+      "pauseIntro": "暂停终幕片头",
+      "resumeIntro": "继续终幕片头",
+      "footer": "FOR ALL THE YEARS TO COME."
+    }
+  },
+  "demo": true,
+  "chapters": [
+    {
+      "id": "beginning",
+      "number": "01",
+      "title": "The Beginning",
+      "subtitle": "初见 · 相爱",
+      "introduction": "每一个故事，都有最初的一帧。",
+      "color": "cream",
+      "memories": [
+        {
+          "id": "demo-01",
+          "title": "第一段回忆",
+          "story": "演示排版 · 这不是我们的私人回忆。\n\n这里会放下你亲手写的故事。可以写照片之外的细节，也可以只写一句想对她说的话。日期、地点和故事都由你来决定，不会自动生成或补全。\n\n长一点也没有关系。打开这封小小的回忆札记时，照片会停留在当前这一帧，放映计时也会暂停。你可以慢慢读、来回看，不必赶在下一张照片出现之前读完。\n\n收起故事后，放映仍保持暂停。等你准备好了，再按“继续放映”。正式使用前，请把这段排版说明换成你们真实的文字。",
+          "photos": [
+            {
+              "id": "lake",
+              "src": "/images/lake.jpg",
+              "alt": "演示素材：山间湖泊与木屋",
+              "width": 1200,
+              "height": 800
+            },
+            {
+              "id": "mountains",
+              "src": "/images/mountains.jpg",
+              "alt": "演示素材：云雾中的山峰",
+              "width": 1200,
+              "height": 800
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "player": {
+    "frameSeconds": 8,
+    "begin": "开始放映",
+    "pause": "暂停放映",
+    "resume": "继续放映",
+    "read": "阅读完整故事",
+    "closeStory": "收起故事",
+    "noStory": "这段故事，等你亲手写下。",
+    "nextChapter": "进入下一幕",
+    "chapterEnd": "Let this moment linger.",
+    "allWatched": "The story goes on.",
+    "returnArchive": "返回胶片档案馆",
+    "replay": "再看一次完整电影",
+    "freeBrowse": "直接进入档案馆"
+  },
+  "premiere": {
+    "enabled": false,
+    "opensAt": "2027-02-07T00:00:00+08:00",
+    "timeZone": "Asia/Shanghai",
+    "copy": {
+      "invitation": "一场只属于你的生日首映。",
+      "waiting": "等时针走到这一刻，再一起打开。",
+      "checking": "正在确认首映时间…",
+      "connectionError": "连接暂时中断，首映时间还在等待确认。",
+      "retry": "重新确认时间",
+      "enter": "进入放映室",
+      "locked": "首映尚未开始",
+      "unscheduled": "首映时间正在安排",
+      "footer": "A PRIVATE SCREENING. JUST FOR YOU."
+    }
+  }
+}

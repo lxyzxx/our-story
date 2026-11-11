@@ -26,7 +26,7 @@ for (const [name, viewport, touch] of [
   page.on('response', (r) => {
     if (r.status() >= 400) errors.push({ name, status: r.status(), url: r.url() });
   });
-  await page.goto(process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3001');
+  await page.goto(process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3002');
   await page.evaluate(() => document.fonts.ready);
   await page.waitForTimeout(1800);
   await page.screenshot({ path: `${directory}/${name}-opening.png`, fullPage: true });

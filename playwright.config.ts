@@ -1,17 +1,43 @@
 import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({
   testDir: './tests',
-  testMatch: ['**/archive.spec.ts', '**/player.spec.ts'],
+  testMatch: ['**/archive.spec.ts', '**/player.spec.ts', '**/finale.spec.ts'],
   fullyParallel: true,
   retries: 0,
   workers: 3,
   reporter: [['list'], ['html', { open: 'never' }]],
   use: {
-    baseURL: process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3001',
+    baseURL: process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3002',
     trace: 'retain-on-failure',
     screenshot: 'only-on-failure',
   },
   projects: [
+    ...(process.env.PREMIERE_TEST_URL
+      ? [
+          {
+            name: 'premiere-gate',
+            testMatch: ['**/premiere.spec.ts'],
+            use: {
+              ...devices['Desktop Chrome'],
+              baseURL: process.env.PREMIERE_TEST_URL,
+              launchOptions: { executablePath: process.env.CHROMIUM_EXECUTABLE },
+            },
+          },
+        ]
+      : []),
+    ...(process.env.FINALE_FIXTURE_URL
+      ? [
+          {
+            name: 'finale-fixture',
+            testMatch: ['**/finale-fixture.spec.ts'],
+            use: {
+              ...devices['Desktop Chrome'],
+              baseURL: process.env.FINALE_FIXTURE_URL,
+              launchOptions: { executablePath: process.env.CHROMIUM_EXECUTABLE },
+            },
+          },
+        ]
+      : []),
     ...(process.env.ARCHIVE_FIXTURE_URL
       ? [
           {

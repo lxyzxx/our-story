@@ -9,3 +9,6 @@ playwright-report/
 .impeccable/questions/
 references/
 docs/reference-frames/
+__pycache__/
+*.py[cod]
+deploy/*.env

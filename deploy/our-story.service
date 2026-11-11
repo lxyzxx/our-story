@@ -1,0 +1,31 @@
+[Unit]
+Description=OUR STORY Film Archive
+Wants=network-online.target
+After=network-online.target docker.service
+StartLimitIntervalSec=60
+StartLimitBurst=5
+
+[Service]
+Type=simple
+User=our-story
+Group=our-story
+WorkingDirectory=/opt/our-story/current
+EnvironmentFile=/etc/our-story/our-story.env
+UnsetEnvironment=PREMIERE_PREVIEW
+ExecStart=/opt/node-v24.18.0/bin/node /opt/our-story/current/server.js
+Restart=on-failure
+RestartSec=3
+TimeoutStopSec=20
+KillSignal=SIGTERM
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+ReadWritePaths=/opt/our-story/shared/cache
+UMask=0027
+MemoryMax=512M
+TasksMax=128
+LimitNOFILE=4096
+
+[Install]
+WantedBy=multi-user.target

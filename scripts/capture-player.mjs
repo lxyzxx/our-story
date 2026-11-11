@@ -21,7 +21,7 @@ for (const [name, viewport, touch] of [
   page.on('response', (r) => {
     if (r.status() >= 400) errors.push({ name, status: r.status(), url: r.url() });
   });
-  await page.goto(process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3001');
+  await page.goto(process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3002');
   await page.getByRole('button', { name: 'BEGIN OUR STORY' }).click();
   await page.locator('.roll-button').first().waitFor();
   await page.waitForTimeout(1600);

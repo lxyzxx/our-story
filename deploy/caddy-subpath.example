@@ -1,0 +1,4 @@
+# Insert into the existing site, ahead of its catch-all reverse_proxy.
+# Keep the prefix: this build uses basePath=/our-story.
+@our_story path /our-story /our-story/*
+reverse_proxy @our_story DOCKER_BRIDGE_GATEWAY:3010

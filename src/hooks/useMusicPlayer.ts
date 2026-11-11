@@ -83,6 +83,13 @@ export function useMusicPlayer(source?: string) {
     activated.current = true;
     start(source);
   }, [source, start]);
+  const activateFor = useCallback(
+    (src?: string) => {
+      activated.current = true;
+      start(src);
+    },
+    [start],
+  );
   useEffect(() => {
     if (activated.current && track.current !== source) start(source);
   }, [source, start]);
@@ -115,6 +122,6 @@ export function useMusicPlayer(source?: string) {
     setVolumeState(v);
     if (audio.current) audio.current.volume = v * gain.current;
   };
-  return { source, status, muted, volume, activate, toggleMute, setVolume };
+  return { source, status, muted, volume, activate, activateFor, toggleMute, setVolume };
 }
 export type MusicController = ReturnType<typeof useMusicPlayer>;

@@ -1,6 +1,6 @@
 # 放映与内容说明
 
-Phase 2 的工作台视觉已由用户确认，Phase 3 延续该方向。这里说明正式放映部分，管理后台与生日终幕仍分别属于 Phase 5 和 Phase 4。
+Phase 2 的工作台视觉已由用户确认，Phase 3 延续该方向。这里说明正式放映部分，Phase 4 生日终幕也已接入，管理后台与持久化属于 Phase 5。
 
 ## 放映路径
 
@@ -18,7 +18,7 @@ Phase 2 的工作台视觉已由用户确认，Phase 3 延续该方向。这里�
 
 ## 音乐
 
-`music.opening`、`music.archive` 配置片头与常规音轨；章节的 `music` 可覆盖常规音轨。`music.finale` 预留给 Phase 4。只填写你有权使用的同源或允许跨域访问的音源。
+`music.opening`、`music.archive` 配置片头与常规音轨；章节的 `music` 可覆盖常规音轨。`music.finale` 用于生日终幕。只填写你有权使用的同源或允许跨域访问的音源。
 
 第一次用户点击时同步请求播放，之后使用同一个原生音频对象，在切换时先淡出再淡入，避免重复实例。音量与静音跨场景保留；无音源、被浏览器拦截、加载失败都不会阻止放映。浏览器拒绝时可手动重试。iPhone 的自动播放权限与音量行为仍需真机验收，不能由 Chromium 测试推定。
 
@@ -35,14 +35,18 @@ Phase 2 的工作台视觉已由用户确认，Phase 3 延续该方向。这里�
 先运行 `npm run build`，再分别启动正常预览和测试实例：
 
 ```bash
-npm run start -- --port 3001
-ARCHIVE_CONTENT_FILE="$PWD/tests/fixtures/archive-50.json" npm run start -- --port 3002
+PREMIERE_PREVIEW=1 npx next start --hostname 127.0.0.1 --port 3002
+ARCHIVE_CONTENT_FILE="$PWD/tests/fixtures/archive-50.json" npx next start --hostname 127.0.0.1 --port 3004
 ```
 
 第二个实例单独运行测试：
 
 ```bash
-ARCHIVE_FIXTURE_URL=http://localhost:3002 npm run test:e2e -- --project=content-fixture
+ARCHIVE_FIXTURE_URL=http://localhost:3004 npm run test:e2e -- --project=content-fixture
 ```
 
-测试完成应停掉 3002 实例。正常预览不设置 `ARCHIVE_CONTENT_FILE`，不会混入测试音频或 50 帧数据。
+测试完成应停掉 3004 实例。正常预览不设置 `ARCHIVE_CONTENT_FILE`，不会混入测试音频或 50 帧数据。
+
+## Phase 4 接入
+
+最后一个有照片的章节结束后进入生日终幕，信件阅读和片尾都由用户主动推进；完成后可以重读生日信。当前默认首映门禁已开启，正常 3001 在北京时间 2027-02-07 00:00 前只显示倒计时。影片回归与截图的默认服务现为作者预览 3002；上方命令使用 `PREMIERE_PREVIEW=1` 且仅绑定本机。具体步骤见 [premiere-guide.md](premiere-guide.md)。

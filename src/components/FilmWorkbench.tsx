@@ -5,6 +5,7 @@ import { gsap } from 'gsap';
 import type { ArchiveContent, Chapter } from '@/lib/types';
 import { FilmRoll } from './FilmRoll';
 import { Icon } from './Icons';
+import { archiveUrl } from '@/lib/urls';
 
 export function FilmWorkbench({
   content,
@@ -89,10 +90,10 @@ export function FilmWorkbench({
         </div>
         <div className="desk-objects">
           <div className="loose-print loose-print--back" aria-hidden="true">
-            <Image src="/images/mountains.jpg" alt="" width={210} height={140} />
+            <Image src={archiveUrl('/images/mountains.jpg')} alt="" width={210} height={140} />
           </div>
           <div className="loose-print loose-print--front" aria-hidden="true">
-            <Image src="/images/coast.jpg" alt="" width={210} height={140} />
+            <Image src={archiveUrl('/images/coast.jpg')} alt="" width={210} height={140} />
             <span>the days we keep.</span>
           </div>
           {content.chapters.map((chapter, index) => (

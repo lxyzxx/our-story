@@ -10,13 +10,18 @@ import { FilmUnroll } from './FilmUnroll';
 import { MusicPlayer } from './MusicPlayer';
 import { MemoryPlayer } from './MemoryPlayer';
 import { ChapterTransition } from './ChapterTransition';
+import { BirthdayFinale } from './BirthdayFinale';
+import { finaleCopy } from '@/lib/finale';
+import { Icon } from './Icons';
 
 type Selection = { chapter: Chapter; origin: DOMRect };
 const subscribe = () => () => {};
 export function FilmArchive({ content }: { content: ArchiveContent }) {
   const [entered, setEntered] = useState(false);
   const [selection, setSelection] = useState<Selection | null>(null);
-  const [screen, setScreen] = useState<'unroll' | 'player' | 'transition'>('unroll');
+  const [screen, setScreen] = useState<'unroll' | 'player' | 'transition' | 'finale'>('unroll');
+  const [finaleEntry, setFinaleEntry] = useState<'intro' | 'letter'>('intro');
+  const copy = finaleCopy(content.finale);
   const [replaying, setReplaying] = useState(false);
   const [musicOpen, setMusicOpen] = useState(false);
   const hydrated = useSyncExternalStore(
@@ -38,9 +43,12 @@ export function FilmArchive({ content }: { content: ArchiveContent }) {
     .find((c) => c.memories.some((m) => m.photos.length > 0));
   const source = !entered
     ? content.music.opening || content.music.archive
-    : selection?.chapter.music || content.music.archive;
+    : screen === 'finale'
+      ? content.music.finale || content.music.archive
+      : selection?.chapter.music || content.music.archive;
   const music = useMusicPlayer(source);
   const activateMusic = music.activate;
+  const activateFor = music.activateFor;
   const completeChapter = progress.completeChapter;
   const root = useRef<HTMLElement>(null);
   const entrance = useRef<gsap.core.Tween | null>(null);
@@ -92,14 +100,21 @@ export function FilmArchive({ content }: { content: ArchiveContent }) {
   }, []);
   const close = useCallback(() => {
     setSelection(null);
+    setScreen('unroll');
     setMusicOpen(false);
-    requestAnimationFrame(() => opener.current?.focus());
+    requestAnimationFrame(() => {
+      const target = opener.current?.isConnected
+        ? opener.current
+        : root.current?.querySelector<HTMLElement>('[data-finale-entry]');
+      target?.focus();
+    });
   }, []);
   const finishChapter = useCallback(() => {
     if (!selection) return;
     completeChapter(selection.chapter.id);
-    setScreen('transition');
-  }, [selection, completeChapter]);
+    setFinaleEntry('intro');
+    setScreen(nextPlayable ? 'transition' : 'finale');
+  }, [selection, completeChapter, nextPlayable]);
   const nextChapter = useCallback(() => {
     const next = nextPlayable;
     if (!next) {
@@ -116,6 +131,19 @@ export function FilmArchive({ content }: { content: ArchiveContent }) {
     setSelection({ chapter: next, origin: rect });
     setScreen('unroll');
   }, [nextPlayable, close]);
+  const readFinale = useCallback(() => {
+    if (!allWatched) return;
+    const last = content.chapters
+      .filter((c) => c.memories.some((m) => m.photos.length > 0))
+      .slice(-1)[0];
+    if (!last) return;
+    opener.current = document.activeElement as HTMLElement;
+    activateFor(content.music.finale || content.music.archive);
+    setEntered(true);
+    setFinaleEntry('letter');
+    setSelection({ chapter: last, origin: new DOMRect() });
+    setScreen('finale');
+  }, [allWatched, content.chapters, content.music.finale, content.music.archive, activateFor]);
   const musicControls = <MusicPlayer controller={music} onPanelChange={setMusicOpen} />;
   return (
     <main ref={root} className={`archive-app ${entered ? 'has-entered' : ''}`}>
@@ -126,6 +154,7 @@ export function FilmArchive({ content }: { content: ArchiveContent }) {
             content={content}
             ready={hydrated}
             completed={allWatched}
+            onLetter={readFinale}
             onBegin={() => begin(false)}
             onReplay={() => begin(true)}
           />
@@ -148,7 +177,21 @@ export function FilmArchive({ content }: { content: ArchiveContent }) {
                 <br />
                 <span>OF OUR DAYS TOGETHER</span>
               </div>
-              {!selection && musicControls}
+              {!selection && (
+                <div className="archive-header-actions">
+                  {allWatched && (
+                    <button
+                      data-finale-entry
+                      className="text-button finale-access"
+                      onClick={readFinale}
+                    >
+                      <Icon name="book" size={15} />
+                      {copy.viewLetter}
+                    </button>
+                  )}
+                  {musicControls}
+                </div>
+              )}
             </header>
             <FilmWorkbench content={content} onOpen={open} completed={progress.completed} />
           </div>
@@ -183,6 +226,17 @@ export function FilmArchive({ content }: { content: ArchiveContent }) {
               onClose={close}
               onComplete={finishChapter}
               onFrame={progress.saveResume}
+            />
+          )}
+          {selection && screen === 'finale' && (
+            <BirthdayFinale
+              key={selection.chapter.id}
+              content={content}
+              chapter={selection.chapter}
+              entry={finaleEntry}
+              music={musicControls}
+              interacting={musicOpen}
+              onClose={close}
             />
           )}
           {selection && screen === 'transition' && (

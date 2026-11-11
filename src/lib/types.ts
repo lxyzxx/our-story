@@ -25,6 +25,54 @@ export interface Chapter {
   memories: Memory[];
   music?: string;
 }
+export interface FinaleCopy {
+  sceneTitle: string;
+  question: string;
+  answer: string;
+  continued: string;
+  title: string;
+  dedication: string;
+  letterTitle: string;
+  letterLabel: string;
+  emptyLetter: string;
+  viewCredits: string;
+  viewLetter: string;
+  creditsTitle: string;
+  byLabel: string;
+  starringLabel: string;
+  loveLine: string;
+  unsigned: string;
+  returnArchive: string;
+  skipIntro: string;
+  pauseIntro: string;
+  resumeIntro: string;
+  footer: string;
+}
+export interface FinaleContent {
+  letter: string;
+  credit: string;
+  starring: string;
+  signature?: string;
+  date?: string;
+  copy?: Partial<FinaleCopy>;
+}
+export interface PremiereCopy {
+  invitation: string;
+  waiting: string;
+  checking: string;
+  connectionError: string;
+  retry: string;
+  enter: string;
+  locked: string;
+  unscheduled: string;
+  footer: string;
+}
+export interface PremiereConfig {
+  enabled: boolean;
+  opensAt: string;
+  timeZone: string;
+  copy?: Partial<PremiereCopy>;
+}
 export interface ArchiveContent {
   title: string;
   subtitle: string;
@@ -42,7 +90,7 @@ export interface ArchiveContent {
     signature: string;
   };
   music: { opening?: string; archive?: string; finale?: string };
-  finale: { letter: string; credit: string; starring: string };
+  finale: FinaleContent;
   chapters: Chapter[];
   player: {
     frameSeconds: number;
@@ -60,6 +108,7 @@ export interface ArchiveContent {
     freeBrowse: string;
   };
   demo: boolean;
+  premiere?: PremiereConfig;
 }
 export interface ContentRepository {
   getArchive(): Promise<ArchiveContent>;

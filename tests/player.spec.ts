@@ -67,8 +67,10 @@ test('首映顺序、章节字幕等待确认、完成后解锁并可重看', as
       await expect(page.locator('.unroll-scene')).toHaveAttribute('data-ready', 'true');
     }
   }
-  await expect(page.getByRole('heading', { name: 'The story goes on.' })).toBeVisible();
-  await page.getByRole('button', { name: '返回胶片档案馆' }).click();
+  await page.getByRole('button', { name: '跳过终幕片头' }).click();
+  await expect(page.getByRole('heading', { name: 'Happy birthday.', exact: true })).toBeVisible();
+  await page.getByRole('button', { name: '看看片尾字幕' }).click();
+  await page.getByRole('button', { name: 'REVISIT OUR MEMORIES' }).click();
   await expect(page.getByText('所有胶卷已解锁，随时重访。')).toBeVisible();
   await page.reload();
   await page.getByRole('button', { name: '再看一次完整电影' }).click();
@@ -85,6 +87,9 @@ test('旋转和刷新恢复照片、音乐面板暂停计时、触屏滑动', as
   await page.getByRole('button', { name: '下一张照片', exact: true }).click();
   await page.setViewportSize({ width: 844, height: 390 });
   await expect(page.locator('.screening')).toHaveAttribute('data-frame', '1');
+  await page.getByRole('button', { name: '音乐设置' }).click();
+  await page.getByRole('button', { name: '关闭音乐设置' }).click();
+  await expect(page.getByLabel('音乐音量')).toHaveCount(0);
   await page.getByRole('button', { name: '音乐设置' }).click();
   await expect(page.getByLabel('音乐音量')).toBeVisible();
   await expect(page.locator('.screening')).toHaveAttribute('data-playing', 'false');

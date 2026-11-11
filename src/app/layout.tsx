@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import localFont from 'next/font/local';
+import type { CSSProperties } from 'react';
+import { archiveUrl } from '@/lib/urls';
 import './globals.css';
 const cinema = localFont({
   src: [
@@ -32,7 +34,11 @@ export const viewport: Viewport = {
 };
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="zh-CN" className={`${cinema.variable} ${interfaceFont.variable}`}>
+    <html
+      lang="zh-CN"
+      className={`${cinema.variable} ${interfaceFont.variable}`}
+      style={{ '--archive-grain': `url("${archiveUrl('/images/grain.png')}")` } as CSSProperties}
+    >
       <body>{children}</body>
     </html>
   );

@@ -87,7 +87,7 @@ button:active {
   inset: 0;
   z-index: 50;
   opacity: 0.065;
-  background-image: url('/images/grain.png');
+  background-image: var(--archive-grain);
   background-size: 180px;
   mix-blend-mode: soft-light;
 }
@@ -543,7 +543,7 @@ button:active {
       transparent 65%,
       rgba(0, 0, 0, 0.25)
     ),
-    url('/images/grain.png');
+    var(--archive-grain);
   background-size: auto, 140px;
   opacity: 0.35;
 }
@@ -749,7 +749,7 @@ button:active {
   content: '';
   position: absolute;
   inset: 0;
-  background: url('/images/grain.png');
+  background: var(--archive-grain);
   opacity: 0.16;
 }
 .desk-note p {
@@ -2112,7 +2112,7 @@ button:active {
   justify-content: space-between;
   gap: 15px;
   position: relative;
-  z-index: 5;
+  z-index: 7;
 }
 .screening-header > div:nth-child(2) {
   text-align: center;
@@ -2925,4 +2925,1034 @@ button:active {
     max-width: 55%;
     text-align: left;
   }
+}
+/* Phase 4 — rewind, birthday letter, and the closing credits. */
+.archive-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.finale-access {
+  font-size: 10px;
+  letter-spacing: 0.03em;
+  color: var(--gold);
+  gap: 8px;
+}
+.birthday-finale {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  overflow: auto;
+  overscroll-behavior: contain;
+  background: #141416;
+  isolation: isolate;
+}
+.birthday-backdrop {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(ellipse at 25% 52%, #34252a 0%, #1b181b 44%, #141416 80%);
+  z-index: -1;
+  pointer-events: none;
+}
+.finale-header {
+  position: sticky;
+  top: 0;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 max(4.2%, env(safe-area-inset-right));
+  z-index: 25;
+  background: #141416ed;
+  gap: 18px;
+}
+.finale-header > .text-button {
+  font-size: 10px;
+  letter-spacing: 0.03em;
+  gap: 10px;
+}
+.finale-brand {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font: 400 18px var(--display);
+  letter-spacing: -0.02em;
+  color: var(--gold);
+}
+.finale-intro {
+  height: calc(100dvh - 96px);
+  min-height: 260px;
+  position: relative;
+  overflow: hidden;
+}
+.finale-semantic-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.finale-lamp {
+  position: absolute;
+  inset: -96px 0 0;
+  background: radial-gradient(ellipse at 50% 55%, #6a434c 0%, #472b32 40%, #141416 87%);
+  pointer-events: none;
+}
+.rewind-anchor {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(1100px, 92vw);
+  height: 300px;
+  transform: translate(-50%, -60%);
+}
+.rewind-stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.rewind-strip {
+  position: absolute;
+  left: 20%;
+  right: 0;
+  top: 66px;
+  height: 185px;
+  display: flex;
+  gap: 12px;
+  padding: 23px 20px;
+  background: linear-gradient(#b57645, #9a5130 50%, #704026);
+  box-shadow: 10px 22px 16px #10070c80;
+  transform-origin: left center;
+  overflow: hidden;
+}
+.rewind-strip:before,
+.rewind-strip:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 9px;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent 0 8px,
+    #2b1a17 8px 17px,
+    transparent 17px 26px
+  );
+}
+.rewind-strip:before {
+  top: 6px;
+}
+.rewind-strip:after {
+  bottom: 6px;
+}
+.rewind-frame {
+  min-width: 195px;
+  flex: 1;
+  overflow: hidden;
+  color: #edc290;
+  position: relative;
+}
+.rewind-frame img {
+  display: block;
+  width: 100%;
+  height: 113px;
+  object-fit: cover;
+  filter: sepia(0.65) saturate(0.7) brightness(0.7);
+}
+.rewind-frame > span {
+  display: block;
+  font-size: 5px;
+  letter-spacing: 0.12em;
+  margin: 3px 0;
+}
+.rewind-reel {
+  position: absolute;
+  left: 4%;
+  top: 70px;
+  --roll-size: 250px;
+  transform: rotate(-90deg);
+  z-index: 2;
+}
+.finale-title {
+  position: absolute;
+  left: 50%;
+  top: 44%;
+  transform: translate(-50%, -50%);
+  width: 92%;
+  text-align: center;
+  font: 400 clamp(44px, 8vw, 120px)/1.14 var(--display);
+  letter-spacing: -0.035em;
+  opacity: 0;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+}
+.finale-answer {
+  font-size: clamp(90px, 12vw, 160px);
+}
+.finale-continued {
+  color: var(--gold);
+  font-size: clamp(38px, 5.4vw, 78px);
+  letter-spacing: 0.01em;
+}
+.finale-intro-controls {
+  position: absolute;
+  bottom: max(35px, env(safe-area-inset-bottom));
+  left: 4.2%;
+  right: 4.2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--gold);
+  gap: 20px;
+}
+.finale-intro-controls .text-button {
+  font-size: 10px;
+  letter-spacing: 0.04em;
+}
+.birthday-letter-layout {
+  min-height: calc(100dvh - 96px);
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: clamp(30px, 6vw, 85px);
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 30px max(35px, 5vw) 60px;
+}
+.birthday-greeting h1 {
+  font: 400 clamp(52px, 6vw, 84px)/1.06 var(--display);
+  letter-spacing: -0.035em;
+  max-width: 11ch;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+  color: var(--cream);
+}
+.birthday-greeting > p {
+  font-size: 13px;
+  color: #ccb8a7;
+  letter-spacing: 0.1em;
+  line-height: 2;
+  margin-top: 28px;
+  max-width: 30ch;
+  white-space: pre-line;
+}
+.birthday-greeting-rule {
+  width: 48px;
+  height: 1px;
+  background: var(--gold);
+  opacity: 0.45;
+  margin: 38px 0 26px;
+}
+.birthday-greeting > span {
+  font-size: 8px;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+}
+.birthday-paper {
+  height: min(710px, calc(100dvh - 170px));
+  min-height: 330px;
+  background: #e4dac7;
+  color: #3b302a;
+  display: flex;
+  flex-direction: column;
+  padding: 26px 37px 22px;
+  box-shadow: 15px 27px 40px #09070966;
+  position: relative;
+}
+.birthday-paper > header {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding-bottom: 17px;
+  border-bottom: 1px solid #6e594b33;
+  font-size: 8px;
+  letter-spacing: 0.16em;
+  color: #755f50;
+}
+.birthday-letter-text {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  overscroll-behavior: contain;
+  padding: 32px 5px 10px;
+}
+.birthday-letter-text h2 {
+  font: italic 400 34px/1.35 var(--display);
+  letter-spacing: -0.02em;
+  margin-bottom: 22px;
+  overflow-wrap: anywhere;
+}
+.birthday-letter-prose {
+  font: 400 15px/2.15 var(--sans);
+  max-width: 65ch;
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+.birthday-letter-prose p {
+  margin-bottom: 1.5em;
+}
+.birthday-signature {
+  font: italic 22px/1.6 var(--display);
+  color: #755f50;
+  margin: 28px 0 20px;
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+.birthday-letter-empty {
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  color: #806855;
+  text-align: center;
+  padding: 25px 12px;
+}
+.birthday-letter-empty p {
+  font-size: 14px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+.birthday-paper > footer {
+  padding-top: 14px;
+  border-top: 1px solid #6e594b33;
+  flex-shrink: 0;
+}
+.birthday-paper > footer > .text-button {
+  width: 100%;
+  justify-content: space-between;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+}
+.birthday-paper :focus-visible {
+  outline-color: #755f50;
+  outline-offset: 4px;
+}
+.birthday-credits {
+  height: calc(100dvh - 96px);
+  min-height: 300px;
+  padding: 15px 55px 36px;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  position: relative;
+}
+.credits-frame {
+  position: fixed;
+  inset: 28px;
+  border: 1px solid #c2ad9120;
+  pointer-events: none;
+  z-index: -1;
+}
+.credits-scroll {
+  overflow: auto;
+  overscroll-behavior: contain;
+  width: min(950px, 100%);
+  margin: 0 auto;
+  text-align: center;
+  padding: 18px 12px;
+}
+.credits-scroll h1 {
+  font: italic 400 clamp(38px, 4.5vw, 64px)/1.2 var(--display);
+  letter-spacing: -0.03em;
+  margin-bottom: 45px;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+}
+.credit-names {
+  margin: 32px 0;
+}
+.credit-names > p {
+  font-size: 9px;
+  letter-spacing: 0.24em;
+  color: var(--gold);
+  margin-bottom: 13px;
+}
+.credit-names > span {
+  font: 400 37px/1.4 var(--display);
+  display: block;
+  color: var(--cream);
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+.credit-love {
+  font-size: 10px;
+  letter-spacing: 0.28em;
+  color: var(--gold);
+  line-height: 1.8;
+  margin: 38px 0 16px;
+}
+.credits-actions {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 3px;
+  padding-top: 12px;
+  text-align: center;
+}
+.credits-actions .begin-button {
+  margin: 0;
+  font-size: 10px;
+  letter-spacing: 0.13em;
+  padding: 14px 7px;
+  gap: 28px;
+  min-height: 48px;
+}
+.credits-actions > .text-button {
+  font-size: 10px;
+  color: var(--gold);
+}
+@media (max-width: 700px) and (orientation: portrait) {
+  .archive-header-actions {
+    gap: 10px;
+  }
+  .finale-access {
+    font-size: 9px;
+    gap: 5px;
+  }
+  .finale-access svg {
+    width: 13px;
+  }
+  .archive-header-actions .music-settings {
+    width: 24px;
+  }
+  .finale-header {
+    height: 78px;
+    padding: 0 max(23px, env(safe-area-inset-right));
+  }
+  .finale-brand {
+    display: none;
+  }
+  .finale-header > .text-button {
+    font-size: 9px;
+  }
+  .finale-header .music-settings {
+    width: 28px;
+  }
+  .finale-intro {
+    height: calc(100dvh - 78px);
+  }
+  .rewind-anchor {
+    width: 96vw;
+    height: 240px;
+    transform: translate(-50%, -62%);
+  }
+  .rewind-reel {
+    --roll-size: 190px;
+    left: -18%;
+    top: 78px;
+  }
+  .rewind-strip {
+    left: 5%;
+    right: -80%;
+    height: 155px;
+    top: 80px;
+    padding: 20px 14px;
+  }
+  .rewind-frame {
+    min-width: 165px;
+  }
+  .rewind-frame img {
+    height: 103px;
+  }
+  .finale-title {
+    top: 43%;
+    width: 90%;
+  }
+  .finale-continued {
+    font-size: 42px;
+  }
+  .finale-intro-controls {
+    bottom: 35px;
+    left: 24px;
+    right: 24px;
+    gap: 12px;
+  }
+  .finale-intro-controls .text-button {
+    font-size: 9px;
+    gap: 7px;
+  }
+  .birthday-letter-layout {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100dvh - 78px);
+    gap: 30px;
+    padding: 25px 24px 35px;
+  }
+  .birthday-greeting {
+    text-align: center;
+    width: 100%;
+  }
+  .birthday-greeting h1 {
+    font-size: 58px;
+    max-width: 14ch;
+    margin: auto;
+  }
+  .birthday-greeting > p {
+    font-size: 11px;
+    margin: 18px auto 0;
+    letter-spacing: 0.08em;
+  }
+  .birthday-greeting-rule {
+    margin: 24px auto 18px;
+    width: 35px;
+  }
+  .birthday-greeting > span {
+    font-size: 7px;
+    letter-spacing: 0.12em;
+  }
+  .birthday-paper {
+    height: min(560px, 68svh);
+    min-height: 340px;
+    width: 100%;
+    padding: 22px 24px 17px;
+  }
+  .birthday-paper > header {
+    font-size: 7px;
+    letter-spacing: 0.12em;
+    padding-bottom: 14px;
+  }
+  .birthday-letter-text {
+    padding: 25px 2px 8px;
+  }
+  .birthday-letter-text h2 {
+    font-size: 29px;
+  }
+  .birthday-letter-prose {
+    font-size: 15px;
+    line-height: 2.05;
+  }
+  .birthday-letter-empty {
+    min-height: 200px;
+    gap: 20px;
+  }
+  .birthday-letter-empty p {
+    font-size: 13px;
+  }
+  .birthday-paper > footer > .text-button {
+    font-size: 10px;
+  }
+  .birthday-signature {
+    font-size: 21px;
+  }
+  .birthday-credits {
+    height: calc(100dvh - 78px);
+    padding: 15px 25px 25px;
+  }
+  .credits-frame {
+    inset: 17px;
+  }
+  .credits-scroll {
+    padding: 20px 4px;
+  }
+  .credits-scroll h1 {
+    font-size: 42px;
+    margin-bottom: 35px;
+  }
+  .credit-names {
+    margin: 27px 0;
+  }
+  .credit-names > p {
+    font-size: 8px;
+  }
+  .credit-names > span {
+    font-size: 30px;
+  }
+  .credit-love {
+    font-size: 9px;
+    margin: 30px 0 10px;
+  }
+  .credits-actions .begin-button {
+    font-size: 8px;
+    letter-spacing: 0.12em;
+    gap: 22px;
+  }
+  .credits-actions > .text-button {
+    font-size: 9px;
+  }
+}
+@media (max-height: 550px) and (orientation: landscape) {
+  .archive-header-actions {
+    gap: 16px;
+  }
+  .finale-access {
+    font-size: 8px;
+    gap: 6px;
+  }
+  .finale-header {
+    height: 52px;
+    padding: 0 max(25px, env(safe-area-inset-right));
+  }
+  .finale-brand {
+    font-size: 14px;
+  }
+  .finale-header > .text-button {
+    font-size: 9px;
+  }
+  .finale-intro {
+    height: calc(100dvh - 52px);
+    min-height: 220px;
+  }
+  .finale-intro-controls {
+    bottom: 12px;
+    left: 30px;
+    right: 30px;
+  }
+  .finale-intro-controls .text-button {
+    font-size: 9px;
+  }
+  .rewind-anchor {
+    height: 230px;
+    transform: translate(-50%, -65%);
+  }
+  .rewind-reel {
+    --roll-size: 180px;
+    top: 80px;
+    left: 9%;
+  }
+  .rewind-strip {
+    height: 135px;
+    top: 78px;
+    left: 23%;
+    padding: 18px 14px;
+  }
+  .rewind-frame {
+    min-width: 140px;
+  }
+  .rewind-frame img {
+    height: 84px;
+  }
+  .rewind-frame > span {
+    font-size: 4px;
+  }
+  .finale-title {
+    font-size: 62px;
+    top: 42%;
+  }
+  .finale-answer {
+    font-size: 92px;
+  }
+  .finale-continued {
+    font-size: 43px;
+  }
+  .birthday-letter-layout {
+    min-height: calc(100dvh - 52px);
+    padding: 14px max(30px, env(safe-area-inset-right)) 23px;
+    gap: 35px;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  }
+  .birthday-greeting h1 {
+    font-size: 43px;
+    max-width: 12ch;
+  }
+  .birthday-greeting > p {
+    font-size: 10px;
+    line-height: 1.9;
+    margin-top: 17px;
+    letter-spacing: 0.05em;
+  }
+  .birthday-greeting-rule {
+    margin: 20px 0 15px;
+    width: 32px;
+  }
+  .birthday-greeting > span {
+    font-size: 6px;
+    letter-spacing: 0.14em;
+  }
+  .birthday-paper {
+    height: calc(100dvh - 95px);
+    min-height: 220px;
+    padding: 15px 24px 12px;
+  }
+  .birthday-paper > header {
+    font-size: 6px;
+    padding-bottom: 10px;
+    letter-spacing: 0.1em;
+  }
+  .birthday-letter-text {
+    padding: 17px 2px 5px;
+  }
+  .birthday-letter-text h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  .birthday-letter-prose {
+    font-size: 13px;
+    line-height: 1.95;
+  }
+  .birthday-letter-empty {
+    min-height: 103px;
+    gap: 11px;
+    padding: 12px 5px;
+  }
+  .birthday-letter-empty svg {
+    width: 19px;
+    height: 19px;
+  }
+  .birthday-letter-empty p {
+    font-size: 11px;
+  }
+  .birthday-paper > footer {
+    padding-top: 3px;
+  }
+  .birthday-paper > footer > .text-button {
+    font-size: 9px;
+    padding: 3px 0;
+  }
+  .birthday-signature {
+    font-size: 18px;
+    margin-top: 18px;
+  }
+  .birthday-credits {
+    height: calc(100dvh - 52px);
+    min-height: 230px;
+    padding: 5px 35px 10px;
+  }
+  .credits-frame {
+    inset: 14px;
+  }
+  .credits-scroll {
+    padding: 7px 10px;
+  }
+  .credits-scroll h1 {
+    font-size: 35px;
+    margin-bottom: 18px;
+  }
+  .credit-names {
+    margin: 15px 0;
+  }
+  .credit-names > p {
+    font-size: 7px;
+    margin-bottom: 6px;
+  }
+  .credit-names > span {
+    font-size: 24px;
+    line-height: 1.25;
+  }
+  .credit-love {
+    font-size: 8px;
+    margin: 19px 0 9px;
+  }
+  .credits-actions {
+    padding-top: 6px;
+    gap: 0;
+  }
+  .credits-actions .begin-button {
+    font-size: 8px;
+    min-height: 40px;
+    padding: 8px 4px;
+    gap: 18px;
+  }
+  .credits-actions > .text-button {
+    font-size: 9px;
+    min-height: 30px;
+    padding: 5px 0;
+  }
+}
+/* Scheduled premiere: a public invitation, with no archive content before the server unlocks. */
+.premiere-gate {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 30px 95px;
+  background: #141416;
+  isolation: isolate;
+  overflow: clip;
+}
+.premiere-glow {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(ellipse at 50% 46%, #3a282d 0%, #221c20 38%, #141416 80%);
+}
+.premiere-frame {
+  position: absolute;
+  inset: 36px;
+  border: 1px solid #c2ad9128;
+  pointer-events: none;
+}
+.premiere-frame:before,
+.premiere-frame:after {
+  content: '';
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  border: 1px solid var(--gold);
+  opacity: 0.55;
+}
+.premiere-frame:before {
+  left: -1px;
+  top: -1px;
+  border-right: 0;
+  border-bottom: 0;
+}
+.premiere-frame:after {
+  bottom: -1px;
+  right: -1px;
+  border-left: 0;
+  border-top: 0;
+}
+.premiere-gate > header {
+  position: absolute;
+  left: 62px;
+  right: 62px;
+  top: 61px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 8px;
+  letter-spacing: 0.18em;
+  color: var(--gold);
+}
+.premiere-invitation {
+  text-align: center;
+  width: min(760px, 100%);
+  padding: 12px 0;
+}
+.premiere-invitation h1 {
+  font: 400 clamp(57px, 8.5vw, 112px)/1.1 var(--display);
+  letter-spacing: -0.035em;
+  color: var(--cream);
+}
+.premiere-subtitle {
+  font-size: 9px;
+  letter-spacing: 0.38em;
+  color: var(--gold);
+  margin-top: 17px;
+}
+.premiere-for-you {
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  color: #cbb7a8;
+  margin-top: 38px;
+  line-height: 1.8;
+}
+.premiere-countdown {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr 1fr 1fr;
+  margin: 40px auto 0;
+  width: min(550px, 100%);
+  font-variant-numeric: tabular-nums;
+}
+.premiere-countdown > div {
+  padding: 0 13px;
+  position: relative;
+}
+.premiere-countdown > div + div:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 23px;
+  height: 24px;
+  width: 1px;
+  background: #c2ad9133;
+}
+.premiere-countdown dd {
+  margin: 0;
+  font: 400 clamp(38px, 5vw, 65px)/1.15 var(--sans);
+  letter-spacing: -0.025em;
+  color: #e6d8c7;
+}
+.premiere-countdown dt {
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  color: var(--gold);
+  margin-top: 12px;
+}
+.premiere-date {
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: #c7b19f;
+  margin-top: 31px;
+  line-height: 1.8;
+}
+.premiere-waiting {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin-top: 16px;
+  line-height: 1.9;
+}
+.premiere-enter {
+  margin-top: 28px;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  min-height: 48px;
+}
+.premiere-enter:disabled {
+  opacity: 0.58;
+  cursor: default;
+}
+.premiere-status {
+  font-size: 11px;
+  color: var(--gold);
+  min-height: 36px;
+  margin-top: 15px;
+  line-height: 1.8;
+}
+.premiere-status .text-button {
+  font-size: 10px;
+  min-height: 36px;
+  padding: 3px 0;
+}
+.premiere-gate > footer {
+  position: absolute;
+  bottom: 62px;
+  left: 30px;
+  right: 30px;
+  text-align: center;
+  font-size: 8px;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+}
+@media (max-width: 700px) and (orientation: portrait) {
+  .premiere-gate {
+    padding: 95px 26px 100px;
+  }
+  .premiere-frame {
+    inset: 18px;
+  }
+  .premiere-gate > header {
+    left: 35px;
+    right: 35px;
+    top: 38px;
+    font-size: 6px;
+    letter-spacing: 0.13em;
+  }
+  .premiere-invitation h1 {
+    font-size: 57px;
+  }
+  .premiere-subtitle {
+    font-size: 7px;
+    letter-spacing: 0.31em;
+    margin-top: 15px;
+  }
+  .premiere-for-you {
+    font-size: 10px;
+    margin-top: 30px;
+    letter-spacing: 0.1em;
+  }
+  .premiere-countdown {
+    margin-top: 33px;
+    width: 100%;
+  }
+  .premiere-countdown > div {
+    padding: 0 8px;
+  }
+  .premiere-countdown dd {
+    font-size: 42px;
+  }
+  .premiere-countdown dt {
+    font-size: 8px;
+    margin-top: 12px;
+  }
+  .premiere-countdown > div + div:before {
+    top: 13px;
+    height: 22px;
+  }
+  .premiere-date {
+    font-size: 9px;
+    letter-spacing: 0;
+    margin-top: 27px;
+  }
+  .premiere-waiting {
+    font-size: 10px;
+    letter-spacing: 0.04em;
+    margin-top: 15px;
+  }
+  .premiere-enter {
+    font-size: 9px;
+    margin-top: 22px;
+  }
+  .premiere-status {
+    font-size: 10px;
+  }
+  .premiere-gate > footer {
+    font-size: 6px;
+    letter-spacing: 0.15em;
+    bottom: 44px;
+  }
+}
+@media (max-height: 550px) and (orientation: landscape) {
+  .premiere-gate {
+    padding: 55px 30px 45px;
+  }
+  .premiere-frame {
+    inset: 15px;
+  }
+  .premiere-gate > header {
+    left: 30px;
+    right: 30px;
+    top: 27px;
+    font-size: 6px;
+    letter-spacing: 0.1em;
+  }
+  .premiere-invitation {
+    padding: 0;
+  }
+  .premiere-invitation h1 {
+    font-size: 43px;
+  }
+  .premiere-subtitle {
+    font-size: 6px;
+    letter-spacing: 0.28em;
+    margin-top: 7px;
+  }
+  .premiere-for-you {
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    margin-top: 13px;
+  }
+  .premiere-countdown {
+    width: 340px;
+    margin-top: 17px;
+  }
+  .premiere-countdown dd {
+    font-size: 36px;
+  }
+  .premiere-countdown dt {
+    font-size: 7px;
+    margin-top: 5px;
+  }
+  .premiere-countdown > div + div:before {
+    top: 9px;
+    height: 18px;
+  }
+  .premiere-date {
+    font-size: 8px;
+    margin-top: 15px;
+  }
+  .premiere-waiting {
+    font-size: 8px;
+    margin-top: 9px;
+  }
+  .premiere-enter {
+    font-size: 8px;
+    min-height: 40px;
+    padding: 7px 5px;
+    margin-top: 8px;
+    gap: 20px;
+  }
+  .premiere-status {
+    min-height: 0;
+    margin-top: 5px;
+    font-size: 9px;
+  }
+  .premiere-status .text-button {
+    font-size: 8px;
+    min-height: 28px;
+  }
+  .premiere-gate > footer {
+    font-size: 5px;
+    letter-spacing: 0.12em;
+    bottom: 26px;
+  }
+}
+
+.birthday-paper .text-button:hover,
+.birthday-paper .text-button:active {
+  color: #211d19;
 }
