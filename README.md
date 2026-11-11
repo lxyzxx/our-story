@@ -65,4 +65,4 @@ npm run start -- --port 3001
 
 [参考分析](docs/reference-analysis.md) · [视觉规范](docs/design-system.md) · [架构与后续计划](docs/architecture.md) · [内容准备](docs/content-guide.md) · [放映指南](docs/player-guide.md) · [倒计时与终幕配置](docs/premiere-guide.md) · [部署与备份](docs/deployment.md) · [素材许可](docs/assets.md) · [开发进度](docs/progress.md)
 
-子路径发布：`NEXT_PUBLIC_ARCHIVE_BASE_PATH=/our-story npm run build`，再 `npm run package:release` 生成 standalone 包。默认不设置前缀时仍从根路径运行。详细操作与版本校验见[阿里云部署](docs/aliyun-deployment.md)。
+子路径发布：`ARCHIVE_STANDALONE=1 NEXT_PUBLIC_ARCHIVE_BASE_PATH=/our-story npm run build`，再 `npm run package:release` 生成 standalone 包。默认不设置前缀时仍从根路径运行。详细操作与版本校验见[阿里云部署](docs/aliyun-deployment.md)。

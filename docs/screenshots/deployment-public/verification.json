@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "base": "http://114.55.234.248/our-story",
+  "checks": [
+    "desktop: gated HTML, API, no-cache, resources and layout",
+    "landscape: gated HTML, API, no-cache, resources and layout",
+    "mobile: gated HTML, API, no-cache, resources and layout"
+  ],
+  "errors": []
+}

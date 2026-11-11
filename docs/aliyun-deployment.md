@@ -1,6 +1,6 @@
 # 阿里云部署操作
 
-本轮用户已授权部署到现有阿里云服务器，并要求有功能改动就推送 GitHub。当前独立应用已安装并通过内部健康检查，公开代理候选配置已验证；公网切换和外网验收结果见 [progress.md](progress.md)。
+本轮用户已授权部署到现有阿里云服务器，并要求有功能改动就推送 GitHub。当前独立应用已安装并通过内部健康检查，公开代理已切换，三尺寸外网门禁验证通过；具体版本和验收结果见 [progress.md](progress.md)。
 
 现有 IP 首页属于其他应用，所以本项目使用 `/our-story`，不接管首页、语音路径或证书验证路径。初次使用 HTTP IP 地址，域名与 HTTPS 后续接入。
 
@@ -21,15 +21,15 @@
 | 代理宿主文件 | `/opt/maomao_makeup/Caddyfile`，变更前备份到 `/opt/our-story/backups/proxy-*` |
 | 发布记录 | `/opt/our-story/deployment.json` 与 `proxy-deployment.json` |
 
-正式单元通过 `UnsetEnvironment=PREMIERE_PREVIEW` 移除预览变量。内存上限 512MiB，Node 堆上限 256MiB；当前只有演示照片和空生日信。部署不代表后台、私有照片授权或正式内容已经完成。
+正式单元通过 `UnsetEnvironment=PREMIERE_PREVIEW` 移除预览变量，`SuccessExitStatus=143` 将 Next.js 响应 SIGTERM 的正常退出归类为成功。内存上限 512MiB，Node 堆上限 256MiB；当前只有演示照片和空生日信。部署不代表后台、私有照片授权或正式内容已经完成。
 
 ## 构建、打包与更新
 
-构建采用 Next.js [standalone](https://nextjs.org/docs/app/api-reference/config/next-config-js/output) 与构建时 [basePath](https://nextjs.org/docs/app/api-reference/config/next-config-js/basePath)。路径改变必须重新构建；只改服务器环境变量不能改变客户端路径。无前缀构建仍是本机默认行为。
+构建采用 Next.js [standalone](https://nextjs.org/docs/app/api-reference/config/next-config-js/output) 与构建时 [basePath](https://nextjs.org/docs/app/api-reference/config/next-config-js/basePath)。`ARCHIVE_STANDALONE=1` 只在发布构建启用精简输出，保留本机默认 build/start 方式。路径改变必须重新构建；只改服务器环境变量不能改变客户端路径。无前缀构建仍是本机默认行为。
 
 ```bash
 # 停止共用本目录 .next 的本地开发/生产进程后执行
-NEXT_TELEMETRY_DISABLED=1 NEXT_PUBLIC_ARCHIVE_BASE_PATH=/our-story npm run build
+NEXT_TELEMETRY_DISABLED=1 ARCHIVE_STANDALONE=1 NEXT_PUBLIC_ARCHIVE_BASE_PATH=/our-story npm run build
 npm run lint
 npm run typecheck
 npm run package:release

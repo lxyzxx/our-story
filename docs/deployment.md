@@ -2,7 +2,7 @@
 
 ## 当前状态
 
-用户本轮已明确授权部署到现有阿里云服务器，并选择先用 IP。当前独立服务已安装、内部健康检查通过，公开路由正在准备；外网验收状态以 [progress.md](progress.md) 为准。没有创建 Supabase 或付费资源，尚无真实私人内容。实际路径、构建、备份与回滚步骤见 [aliyun-deployment.md](aliyun-deployment.md)。
+用户本轮已明确授权部署到现有阿里云服务器，并选择先用 IP。当前独立服务已安装并完成公开切换，桌面/横屏/竖屏外网门禁验证通过；具体版本与验收状态以 [progress.md](progress.md) 为准。没有创建 Supabase 或付费资源，尚无真实私人内容。实际路径、构建、备份与回滚步骤见 [aliyun-deployment.md](aliyun-deployment.md)。
 
 ## 开发与生产构建
 

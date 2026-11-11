@@ -36,4 +36,4 @@
 - Do 保持公开入口的服务端首映锁定与本机预览实例隔离；门禁仍不构成 public 图片授权。
 - Don't 将本机发布包与截图通过写成公网部署、真机或正式私人内容验收。
 
-原 [Phase 4 独立评审](review/phase4-finish-review.md) 的本地 ship 结论保持原范围；本次部署扩展的[独立收尾评审](review/deployment-finish-review.md) 已给出限定 ship，P0–P2 无待修项，P3 为公开切换后同步部署状态。本文形成时，协调方交接状态为服务器已私下安装、代理候选已验证，公网入口尚未切换；该状态未由本文独立验证，不授予公开完成结论。源码依据为 `layout.tsx`、`globals.css`、`urls.ts`、`content.ts`、`FilmWorkbench`、`PremiereGate`、`next.config.ts` 与验证脚本。真实照片、私人故事、正式信件/姓名/配乐、后台、认证及私有媒体权限仍保留原验收边界。
+原 [Phase 4 独立评审](review/phase4-finish-review.md) 的本地 ship 结论保持原范围；本次部署扩展的[独立收尾评审](review/deployment-finish-review.md) 已给出限定 ship，P0–P2 无待修项，P3 为公开切换后同步部署状态。本文形成时，协调方交接状态为服务器已私下安装、代理候选已验证，公网入口当时尚未切换；后续协调方已完成公开三尺寸验证，结果以 progress.md 与 deployment-public/verification.json 为准，不扩大本设计复核范围。源码依据为 `layout.tsx`、`globals.css`、`urls.ts`、`content.ts`、`FilmWorkbench`、`PremiereGate`、`next.config.ts` 与验证脚本。真实照片、私人故事、正式信件/姓名/配乐、后台、认证及私有媒体权限仍保留原验收边界。
