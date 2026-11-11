@@ -8,6 +8,7 @@ await fs.mkdir(directory, { recursive: true });
 const browser = await chromium.launch({ executablePath: process.env.CHROMIUM_EXECUTABLE });
 const errors = [];
 const checks = [];
+const tls = [];
 let passed = false;
 function observe(page, prefix) {
   page.on('pageerror', (error) => errors.push({ prefix, error: error.message }));
@@ -61,6 +62,17 @@ try {
     observe(page, base);
     const response = await page.goto(base);
     assert.equal(response.status(), 200);
+    if (new URL(base).protocol === 'https:') {
+      assert(
+        await page.evaluate(() => window.isSecureContext),
+        'Expected a secure browser context',
+      );
+      tls.push({
+        viewport: name,
+        secureContext: true,
+        certificate: await response.securityDetails(),
+      });
+    }
     assert.match(response.headers()['cache-control'], /no-store/);
     const html = await response.text();
     assert(!html.includes('The Beginning'), 'Premiere HTML must not send chapter titles');
@@ -153,7 +165,7 @@ try {
 } finally {
   await fs.writeFile(
     `${directory}/verification.json`,
-    JSON.stringify({ passed, base, preview, checks, errors }, null, 2) + '\n',
+    JSON.stringify({ passed, base, preview, checks, tls, errors }, null, 2) + '\n',
   );
   await browser.close();
 }

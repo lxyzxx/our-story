@@ -1,0 +1,34 @@
+{
+  "url": "https://114.55.234.248:8443/our-story",
+  "appliedAt": "2026-11-11T10:17:28.258294Z",
+  "backup": "/opt/our-story/backups/https-20261111T101727560346Z",
+  "configs": {
+    "herdr-gateway": "05eef4e5022f60fca48a32f7ec2194cba2b503cf00fde2490be3f34c57404998",
+    "maomao_makeup-caddy-1": "e54f99360b6909aa793326b49cd6296ac0ae8e21f32ecc5d43d39c33f26e0108"
+  },
+  "tlsLeafSha256Unchanged": {
+    "443": "e256520a5d28e245e3b222be3a04085729d355a2f042f1384c7933e9786b294f",
+    "8443": "08177c404fe8ed28a38c799aa07c2505e86e76d9ccbfb46e64dfbefa8b091b83"
+  },
+  "existingStatuses": {
+    "80/": 200,
+    "80/xiaozhi/v1/": 200,
+    "80/.well-known/acme-challenge/our-story-preflight": 502,
+    "443/xiaozhi/v1/": 200,
+    "8443/": 200,
+    "8443/orca": 404,
+    "8443/api/session": 401
+  },
+  "premiere": {
+    "enabled": true,
+    "status": "locked",
+    "serverNow": 1794392248191,
+    "opensAt": "2027-02-07T00:00:00+08:00",
+    "timeZone": "Asia/Shanghai",
+    "preview": false
+  },
+  "httpRedirect": "https://114.55.234.248:8443/our-story?preview=1",
+  "note": "Local checks preserve identity; strict public TLS/browser acceptance is a separate required check.",
+  "certificateObserved": "issuer=C = US, O = Let's Encrypt, CN = YE1\nnotBefore=Nov 10 03:35:54 2026 GMT\nnotAfter=Nov 16 19:35:53 2026 GMT\nX509v3 Subject Alternative Name: critical\n    IP Address:114.55.234.248",
+  "applicationGitCommit": "873006941f92162bd8ae74d429ccf945ac887b2f"
+}

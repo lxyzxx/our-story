@@ -2,13 +2,13 @@
 
 本轮用户已授权部署到现有阿里云服务器，并要求有功能改动就推送 GitHub。当前独立应用已安装并通过内部健康检查，公开代理已切换，三尺寸外网门禁验证通过；具体版本和验收结果见 [progress.md](progress.md)。
 
-现有 IP 首页属于其他应用，所以本项目使用 `/our-story`，不接管首页、语音路径或证书验证路径。初次使用 HTTP IP 地址，域名与 HTTPS 后续接入。
+现有 IP 首页属于其他应用，所以本项目使用 `/our-story`，不接管首页、语音路径或证书验证路径。首次以 HTTP IP 上线，现已接入服务器既有可信证书的 8443 HTTPS 网关；原 HTTP 地址会跳转，域名后续接入。默认443另有现有服务和内部证书，不改变其身份。
 
 ## 运行结构
 
 | 项目 | 位置 / 配置 |
 | --- | --- |
-| 对外入口 | `http://114.55.234.248/our-story` |
+| 对外入口 | `https://114.55.234.248:8443/our-story`；旧 HTTP 地址308跳转 |
 | 应用服务 | `our-story.service`，开机启动、失败重启，以 `our-story` 系统用户运行 |
 | Node | `/opt/node-v24.18.0/bin/node`，复用已安装的 Node 24，不修改全局运行时 |
 | 版本目录 | `/opt/our-story/releases/<releaseId>`，root 管理，应用只读 |
@@ -17,7 +17,7 @@
 | 图片处理缓存 | `/opt/our-story/shared/cache`，应用唯一的持久可写目录 |
 | 运行环境 | `/etc/our-story/our-story.env`，root 600；不存入 Git |
 | 应用监听 | Docker 桥网关 `10.255.1.1:3010`，仅供现有 Caddy 访问；未开放公网应用端口 |
-| 公开代理 | 现有 `maomao_makeup-caddy-1`，仅增加 `/our-story` 匹配 |
+| 公开代理 | `herdr-gateway` 的8443专属路径；`maomao_makeup-caddy-1` 的80仅跳转该路径 |
 | 代理宿主文件 | `/opt/maomao_makeup/Caddyfile`，变更前备份到 `/opt/our-story/backups/proxy-*` |
 | 发布记录 | `/opt/our-story/deployment.json` 与 `proxy-deployment.json` |
 
@@ -78,13 +78,13 @@ ssh our-story-server python3 - \
 ```bash
 ssh our-story-server systemctl status our-story.service --no-pager
 ssh our-story-server journalctl -u our-story.service -n 40 --no-pager
-curl --noproxy '*' -fsS http://114.55.234.248/our-story/api/premiere
+curl --noproxy '*' -fsS https://114.55.234.248:8443/our-story/api/premiere
 ```
 
 `VERIFY_BASE_URL` 指向待检的公开门禁；`VERIFY_PREVIEW_URL` 只允许指向本机作者预览。`scripts/verify-deployment.mjs` 检查三尺寸的 HTTP/API/无缓存/资源路径/布局，可选同包本机预览检查照片完成加载、原生 Audio 的路径与播放推进、实际关闭音乐面板和外部 JSON 信件。测试音轨是合成静音 WAV、信件明确为排版测试，不上传到正式内容。
 
 ```bash
-VERIFY_BASE_URL=http://114.55.234.248/our-story \
+VERIFY_BASE_URL=https://114.55.234.248:8443/our-story \
 VERIFY_CAPTURE_DIR=docs/screenshots/deployment-public \
 node scripts/verify-deployment.mjs
 ```
@@ -102,3 +102,15 @@ node scripts/verify-deployment.mjs
 ## 2026-11-11 最终验收
 
 运行应用对应 Git 提交 `873006941f92162bd8ae74d429ccf945ac887b2f`，干净构建；源码摘要、包校验和、服务单元校验和、现有路由基线和最终门禁状态见[发布记录](releases/2026-11-11-aliyun.json)。最终外网三尺寸复验通过，原有根路径保持不变；本机根路径相关回归6/6通过。文档/截图后续提交不等同于重新发布应用。
+
+## HTTPS 接入与旧地址跳转
+
+当前可分享的规范地址为 **https://114.55.234.248:8443/our-story**，端口8443必须保留。默认443原先使用 Caddy 内部证书且没有影片路由，浏览器无法正常信任；本轮不改变该端口的已有服务身份。
+
+复用 `herdr-gateway` 已有的 Let's Encrypt IP 证书与自动续期配置，仅新增 `/our-story` 的 handle，其他 Herdr/Orca 路由继续保留。主HTTP站点的专属规则改为308到上述地址，保留原URI和查询参数。80端口原有 ACME challenge 路由不变，未复制私钥、另行申请证书或改动证书存储。证书为短期证书，观察到的到期时间不能当作永久日期，续期依赖既有 Caddy/ACME 服务保持运行。
+
+`deploy/configure-https.py` 是本次两份配置的受控迁移：先校验原摘要与两个候选，备份，先启用HTTPS，再切HTTP跳转；保留文件inode以适配bind mount；既有路由响应/证书叶子指纹改变或门禁异常即回滚。脚本只适用于检查时的配置摘要，完成后再运行会拒绝覆盖，不能当作日常更新脚本。官方行为见 [Caddy reload](https://caddyserver.com/docs/command-line#caddy-reload) 与 [URI跳转](https://caddyserver.com/docs/caddyfile/directives/redir)。
+
+配置与身份保持记录见[HTTPS记录](releases/2026-11-11-https.json)，当前三尺寸可信浏览器结果见 `docs/screenshots/deployment-https/verification.json`。本地TLS指纹检查为了比较443既有内部证书会跳过本地信任校验；公开验收另用正常 curl 与不忽略证书错误的 Chromium，二者不能混为一项验证。
+
+回滚时同时考虑两份代理配置：先将HTTP专属规则恢复原反代，再移除网关OUR STORY HTTPS块；证书和原有隧道不需要改动。已有后续配置时只移除本项目标记，不能整份旧文件覆盖其他变更。

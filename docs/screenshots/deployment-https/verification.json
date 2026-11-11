@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "base": "https://114.55.234.248:8443/our-story",
+  "checks": [
+    "desktop: gated HTML, API, no-cache, resources and layout",
+    "landscape: gated HTML, API, no-cache, resources and layout",
+    "mobile: gated HTML, API, no-cache, resources and layout"
+  ],
+  "tls": [
+    {
+      "viewport": "desktop",
+      "secureContext": true,
+      "certificate": {
+        "issuer": "YE1",
+        "protocol": "TLS 1.3",
+        "subjectName": "",
+        "validFrom": 1794281754,
+        "validTo": 1794857753
+      }
+    },
+    {
+      "viewport": "landscape",
+      "secureContext": true,
+      "certificate": {
+        "issuer": "YE1",
+        "protocol": "TLS 1.3",
+        "subjectName": "",
+        "validFrom": 1794281754,
+        "validTo": 1794857753
+      }
+    },
+    {
+      "viewport": "mobile",
+      "secureContext": true,
+      "certificate": {
+        "issuer": "YE1",
+        "protocol": "TLS 1.3",
+        "subjectName": "",
+        "validFrom": 1794281754,
+        "validTo": 1794857753
+      }
+    }
+  ],
+  "errors": []
+}
