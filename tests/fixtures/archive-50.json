@@ -1,0 +1,504 @@
+{
+  "title": "OUR STORY",
+  "subtitle": "A FILM ABOUT US",
+  "starring": "You & Me",
+  "heading": "Some things are",
+  "headingEmphasis": "worth keeping.",
+  "dedication": "献给你，和我们一起走过的每一个平凡日子。",
+  "opening": {
+    "begin": "BEGIN OUR STORY",
+    "skip": "跳过片头",
+    "invitation": "一场只属于我们的私人放映",
+    "rotate": "横过手机，让回忆铺满银幕。",
+    "portrait": "继续竖屏浏览"
+  },
+  "workbench": {
+    "title": "THE FILM ARCHIVE",
+    "select": "选一卷胶片，打开一段时光。",
+    "touchOpen": "再次轻触，展开胶片",
+    "back": "返回工作台",
+    "note": "For all the little things,\nand all the years to come.",
+    "signature": "Always, you & me"
+  },
+  "music": {
+    "opening": "/audio/opening-test.wav",
+    "archive": "/audio/archive-test.wav"
+  },
+  "finale": {
+    "letter": "",
+    "credit": "",
+    "starring": ""
+  },
+  "demo": true,
+  "chapters": [
+    {
+      "id": "beginning",
+      "number": "01",
+      "title": "The Beginning",
+      "subtitle": "初见 · 相爱",
+      "introduction": "每一个故事，都有最初的一帧。",
+      "color": "cream",
+      "memories": [
+        {
+          "id": "demo-01",
+          "title": "第一段回忆",
+          "story": "演示排版 · 这不是我们的私人回忆。\n\n这里会放下你亲手写的故事。可以写照片之外的细节，也可以只写一句想对她说的话。日期、地点和故事都由你来决定，不会自动生成或补全。\n\n长一点也没有关系。打开这封小小的回忆札记时，照片会停留在当前这一帧，放映计时也会暂停。你可以慢慢读、来回看，不必赶在下一张照片出现之前读完。\n\n收起故事后，放映仍保持暂停。等你准备好了，再按“继续放映”。正式使用前，请把这段排版说明换成你们真实的文字。",
+          "photos": [
+            {
+              "id": "test-frame-00",
+              "src": "/images/lake.jpg",
+              "alt": "自动化测试素材 1，非私人照片",
+              "width": 1200,
+              "height": 800
+            },
+            {
+              "id": "test-frame-01",
+              "src": "/images/mountains.jpg",
+              "alt": "自动化测试素材 2，非私人照片",
+              "width": 1200,
+              "height": 800
+            },
+            {
+              "id": "test-frame-02",
+              "src": "/images/forest-portrait.jpg",
+              "alt": "自动化测试素材 3，非私人照片",
+              "width": 800,
+              "height": 1200
+            },
+            {
+              "id": "test-frame-03",
+              "src": "/images/lake.jpg",
+              "alt": "自动化测试素材 4，非私人照片",
+              "width": 1200,
+              "height": 800
+            },
+            {
+              "id": "test-frame-04",
+              "src": "/images/mountains.jpg",
+              "alt": "自动化测试素材 5，非私人照片",
+              "width": 1200,
+              "height": 800
+            },
+            {
+              "id": "test-frame-05",
+              "src": "/images/forest-portrait.jpg",
+              "alt": "自动化测试素材 6，非私人照片",
+              "width": 800,
+              "height": 1200
+            },
+            {
+              "id": "test-frame-06",
+              "src": "/images/lake.jpg",
+              "alt": "自动化测试素材 7，非私人照片",
+              "width": 1200,
+              "height": 800
+            },
+            {
+              "id": "test-frame-07",
+              "src": "/images/mountains.jpg",
+              "alt": "自动化测试素材 8，非私人照片",
+              "width": 1200,
+              "height": 800
+            },
+            {
+              "id": "test-frame-08",
+              "src": "/images/forest-portrait.jpg",
+              "alt": "自动化测试素材 9，非私人照片",
+              "width": 800,
+              "height": 1200
+            },
+            {
+              "id": "test-frame-09",
+              "src": "/images/lake.jpg",
+              "alt": "自动化测试素材 10，非私人照片",
+              "width": 1200,
+              "height": 800
+            },
+            {
+              "id": "test-frame-10",
+              "src": "/images/mountains.jpg",
+              "alt": "自动化测试素材 11，非私人照片",
+              "width": 1200,
+              "height": 800
+            },
+            {
+              "id": "test-frame-11",
+              "src": "/images/forest-portrait.jpg",
+              "alt": "自动化测试素材 12，非私人照片",
+              "width": 800,
+              "height": 1200
+            },
+            {
+              "id": "test-frame-12",
+              "src": "/images/lake.jpg",
+              "alt": "自动化测试素材 13，非私人照片",
+              "width": 1200,
+              "height": 800
+            },
+            {
+              "id": "test-frame-13",
+              "src": "/images/mountains.jpg",
+              "alt": "自动化测试素材 14，非私人照片",
+              "width": 1200,
+              "height": 800
+            },
+            {
+              "id": "test-frame-14",
+              "src": "/images/forest-portrait.jpg",
+              "alt": "自动化测试素材 15，非私人照片",
+              "width": 800,
+              "height": 1200
+            },
+            {
+              "id": "test-frame-15",
+              "src": "/images/lake.jpg",
+              "alt": "自动化测试素材 16，非私人照片",
+              "width": 1200,
+              "height": 800
+            },
+            {
+              "id": "test-frame-16",
+              "src": "/images/mountains.jpg",
+              "alt": "自动化测试素材 17，非私人照片",
+              "width": 1200,
+              "height": 800
+            },
+            {
+              "id": "test-frame-17",
+              "src": "/images/forest-portrait.jpg",
+              "alt": "自动化测试素材 18，非私人照片",
+              "width": 800,
+              "height": 1200
+            },
+            {
+              "id": "test-frame-18",
+              "src": "/images/lake.jpg",
+              "alt": "自动化测试素材 19，非私人照片",
+              "width": 1200,
+              "height": 800
+            },
+            {
+              "id": "test-frame-19",
+              "src": "/images/mountains.jpg",
+              "alt": "自动化测试素材 20，非私人照片",
+              "width": 1200,
+              "height": 800
+            },
+            {
+              "id": "test-frame-20",
+              "src": "/images/forest-portrait.jpg",
+              "alt": "自动化测试素材 21，非私人照片",
+              "width": 800,
+              "height": 1200
+            },
+            {
+              "id": "test-frame-21",
+              "src": "/images/lake.jpg",
+              "alt": "自动化测试素材 22，非私人照片",
+              "width": 1200,
+              "height": 800
+            },
+            {
+              "id": "test-frame-22",
+              "src": "/images/mountains.jpg",
+              "alt": "自动化测试素材 23，非私人照片",
+              "width": 1200,
+              "height": 800
+            },
+            {
+              "id": "test-frame-23",
+              "src": "/images/forest-portrait.jpg",
+              "alt": "自动化测试素材 24，非私人照片",
+              "width": 800,
+              "height": 1200
+            },
+            {
+              "id": "test-frame-24",
+              "src": "/images/lake.jpg",
+              "alt": "自动化测试素材 25，非私人照片",
+              "width": 1200,
+              "height": 800
+            },
+            {
+              "id": "test-frame-25",
+              "src": "/images/mountains.jpg",
+              "alt": "自动化测试素材 26，非私人照片",
+              "width": 1200,
+              "height": 800
+            },
+            {
+              "id": "test-frame-26",
+              "src": "/images/forest-portrait.jpg",
+              "alt": "自动化测试素材 27，非私人照片",
+              "width": 800,
+              "height": 1200
+            },
+            {
+              "id": "test-frame-27",
+              "src": "/images/lake.jpg",
+              "alt": "自动化测试素材 28，非私人照片",
+              "width": 1200,
+              "height": 800
+            },
+            {
+              "id": "test-frame-28",
+              "src": "/images/mountains.jpg",
+              "alt": "自动化测试素材 29，非私人照片",
+              "width": 1200,
+              "height": 800
+            },
+            {
+              "id": "test-frame-29",
+              "src": "/images/forest-portrait.jpg",
+              "alt": "自动化测试素材 30，非私人照片",
+              "width": 800,
+              "height": 1200
+            },
+            {
+              "id": "test-frame-30",
+              "src": "/images/lake.jpg",
+              "alt": "自动化测试素材 31，非私人照片",
+              "width": 1200,
+              "height": 800
+            },
+            {
+              "id": "test-frame-31",
+              "src": "/images/mountains.jpg",
+              "alt": "自动化测试素材 32，非私人照片",
+              "width": 1200,
+              "height": 800
+            },
+            {
+              "id": "test-frame-32",
+              "src": "/images/forest-portrait.jpg",
+              "alt": "自动化测试素材 33，非私人照片",
+              "width": 800,
+              "height": 1200
+            },
+            {
+              "id": "test-frame-33",
+              "src": "/images/lake.jpg",
+              "alt": "自动化测试素材 34，非私人照片",
+              "width": 1200,
+              "height": 800
+            },
+            {
+              "id": "test-frame-34",
+              "src": "/images/mountains.jpg",
+              "alt": "自动化测试素材 35，非私人照片",
+              "width": 1200,
+              "height": 800
+            },
+            {
+              "id": "test-frame-35",
+              "src": "/images/forest-portrait.jpg",
+              "alt": "自动化测试素材 36，非私人照片",
+              "width": 800,
+              "height": 1200
+            },
+            {
+              "id": "test-frame-36",
+              "src": "/images/lake.jpg",
+              "alt": "自动化测试素材 37，非私人照片",
+              "width": 1200,
+              "height": 800
+            },
+            {
+              "id": "test-frame-37",
+              "src": "/images/mountains.jpg",
+              "alt": "自动化测试素材 38，非私人照片",
+              "width": 1200,
+              "height": 800
+            },
+            {
+              "id": "test-frame-38",
+              "src": "/images/forest-portrait.jpg",
+              "alt": "自动化测试素材 39，非私人照片",
+              "width": 800,
+              "height": 1200
+            },
+            {
+              "id": "test-frame-39",
+              "src": "/images/lake.jpg",
+              "alt": "自动化测试素材 40，非私人照片",
+              "width": 1200,
+              "height": 800
+            },
+            {
+              "id": "test-frame-40",
+              "src": "/images/mountains.jpg",
+              "alt": "自动化测试素材 41，非私人照片",
+              "width": 1200,
+              "height": 800
+            },
+            {
+              "id": "test-frame-41",
+              "src": "/images/forest-portrait.jpg",
+              "alt": "自动化测试素材 42，非私人照片",
+              "width": 800,
+              "height": 1200
+            },
+            {
+              "id": "test-frame-42",
+              "src": "/images/lake.jpg",
+              "alt": "自动化测试素材 43，非私人照片",
+              "width": 1200,
+              "height": 800
+            },
+            {
+              "id": "test-frame-43",
+              "src": "/images/mountains.jpg",
+              "alt": "自动化测试素材 44，非私人照片",
+              "width": 1200,
+              "height": 800
+            },
+            {
+              "id": "test-frame-44",
+              "src": "/images/forest-portrait.jpg",
+              "alt": "自动化测试素材 45，非私人照片",
+              "width": 800,
+              "height": 1200
+            },
+            {
+              "id": "test-frame-45",
+              "src": "/images/lake.jpg",
+              "alt": "自动化测试素材 46，非私人照片",
+              "width": 1200,
+              "height": 800
+            },
+            {
+              "id": "test-frame-46",
+              "src": "/images/mountains.jpg",
+              "alt": "自动化测试素材 47，非私人照片",
+              "width": 1200,
+              "height": 800
+            },
+            {
+              "id": "test-frame-47",
+              "src": "/images/forest-portrait.jpg",
+              "alt": "自动化测试素材 48，非私人照片",
+              "width": 800,
+              "height": 1200
+            },
+            {
+              "id": "test-frame-48",
+              "src": "/images/lake.jpg",
+              "alt": "自动化测试素材 49，非私人照片",
+              "width": 1200,
+              "height": 800
+            },
+            {
+              "id": "test-frame-49",
+              "src": "/images/mountains.jpg",
+              "alt": "自动化测试素材 50，非私人照片",
+              "width": 1200,
+              "height": 800
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adventures",
+      "number": "02",
+      "title": "Our Adventures",
+      "subtitle": "远行 · 同行",
+      "introduction": "把沿途的风景，慢慢收藏。",
+      "color": "olive",
+      "memories": [],
+      "music": "/audio/chapter-test.wav"
+    },
+    {
+      "id": "moments",
+      "number": "03",
+      "title": "Little Moments",
+      "subtitle": "日常 · 微光",
+      "introduction": "那些很小、却不想忘记的瞬间。",
+      "color": "rust",
+      "memories": [
+        {
+          "id": "demo-03",
+          "title": "日常的光",
+          "story": "",
+          "photos": [
+            {
+              "id": "forest-2",
+              "src": "/images/forest-portrait.jpg",
+              "alt": "演示素材：林间光影",
+              "width": 800,
+              "height": 1200
+            },
+            {
+              "id": "coast-2",
+              "src": "/images/coast.jpg",
+              "alt": "演示素材：海边日落",
+              "width": 1200,
+              "height": 800
+            },
+            {
+              "id": "lake-3",
+              "src": "/images/lake.jpg",
+              "alt": "演示素材：湖边木屋",
+              "width": 1200,
+              "height": 800
+            }
+          ]
+        }
+      ],
+      "music": "/audio/missing-test.wav"
+    },
+    {
+      "id": "continued",
+      "number": "04",
+      "title": "To Be Continued",
+      "subtitle": "此刻 · 以后",
+      "introduction": "还有好多好多年，等我们一起写。",
+      "color": "charcoal",
+      "memories": [
+        {
+          "id": "demo-04",
+          "title": "未完待续",
+          "story": "",
+          "photos": [
+            {
+              "id": "coast-3",
+              "src": "/images/coast.jpg",
+              "alt": "演示素材：海边余晖",
+              "width": 1200,
+              "height": 800
+            },
+            {
+              "id": "mountains-3",
+              "src": "/images/mountains.jpg",
+              "alt": "演示素材：绵延的山峰",
+              "width": 1200,
+              "height": 800
+            },
+            {
+              "id": "forest-3",
+              "src": "/images/forest-portrait.jpg",
+              "alt": "演示素材：森林小径",
+              "width": 800,
+              "height": 1200
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "player": {
+    "frameSeconds": 8,
+    "begin": "开始放映",
+    "pause": "暂停放映",
+    "resume": "继续放映",
+    "read": "阅读完整故事",
+    "closeStory": "收起故事",
+    "noStory": "这段故事，等你亲手写下。",
+    "nextChapter": "进入下一幕",
+    "chapterEnd": "Let this moment linger.",
+    "allWatched": "The story goes on.",
+    "returnArchive": "返回胶片档案馆",
+    "replay": "再看一次完整电影",
+    "freeBrowse": "直接进入档案馆"
+  }
+}

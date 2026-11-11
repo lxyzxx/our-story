@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-11",
+  "mode": "production",
+  "browser": "Chrome for Testing 158.0.8127.18",
+  "projects": {
+    "desktop": {
+      "passed": 11,
+      "failed": 0,
+      "status": "passed"
+    },
+    "landscape": {
+      "passed": 11,
+      "failed": 0,
+      "status": "passed"
+    },
+    "portrait": {
+      "passed": 11,
+      "failed": 0,
+      "status": "passed"
+    },
+    "fixture": {
+      "passed": 4,
+      "failed": 0,
+      "status": "passed"
+    }
+  },
+  "totalPassed": 37,
+  "fixtureNote": "50 frames using repeated demonstration images; native synthetic WAV via isolated Playwright routes, not real private assets or real-device performance acceptance."
+}

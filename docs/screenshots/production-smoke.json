@@ -1,0 +1,7 @@
+{
+  "mode": "production",
+  "browser": "158.0.8127.18",
+  "httpHost": "127.0.0.1:3001",
+  "flow": "opening > workbench > roll04 > next frame > Escape",
+  "errors": []
+}

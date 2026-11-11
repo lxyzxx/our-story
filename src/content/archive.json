@@ -1,0 +1,199 @@
+{
+  "title": "OUR STORY",
+  "subtitle": "A FILM ABOUT US",
+  "starring": "You & Me",
+  "heading": "Some things are",
+  "headingEmphasis": "worth keeping.",
+  "dedication": "献给你，和我们一起走过的每一个平凡日子。",
+  "opening": {
+    "begin": "BEGIN OUR STORY",
+    "skip": "跳过片头",
+    "invitation": "一场只属于我们的私人放映",
+    "rotate": "横过手机，让回忆铺满银幕。",
+    "portrait": "继续竖屏浏览"
+  },
+  "workbench": {
+    "title": "THE FILM ARCHIVE",
+    "select": "选一卷胶片，打开一段时光。",
+    "touchOpen": "再次轻触，展开胶片",
+    "back": "返回工作台",
+    "note": "For all the little things,\nand all the years to come.",
+    "signature": "Always, you & me"
+  },
+  "music": {},
+  "finale": {
+    "letter": "",
+    "credit": "",
+    "starring": ""
+  },
+  "demo": true,
+  "chapters": [
+    {
+      "id": "beginning",
+      "number": "01",
+      "title": "The Beginning",
+      "subtitle": "初见 · 相爱",
+      "introduction": "每一个故事，都有最初的一帧。",
+      "color": "cream",
+      "memories": [
+        {
+          "id": "demo-01",
+          "title": "第一段回忆",
+          "story": "演示排版 · 这不是我们的私人回忆。\n\n这里会放下你亲手写的故事。可以写照片之外的细节，也可以只写一句想对她说的话。日期、地点和故事都由你来决定，不会自动生成或补全。\n\n长一点也没有关系。打开这封小小的回忆札记时，照片会停留在当前这一帧，放映计时也会暂停。你可以慢慢读、来回看，不必赶在下一张照片出现之前读完。\n\n收起故事后，放映仍保持暂停。等你准备好了，再按“继续放映”。正式使用前，请把这段排版说明换成你们真实的文字。",
+          "photos": [
+            {
+              "id": "lake",
+              "src": "/images/lake.jpg",
+              "alt": "演示素材：山间湖泊与木屋",
+              "width": 1200,
+              "height": 800
+            },
+            {
+              "id": "mountains",
+              "src": "/images/mountains.jpg",
+              "alt": "演示素材：云雾中的山峰",
+              "width": 1200,
+              "height": 800
+            },
+            {
+              "id": "forest",
+              "src": "/images/forest-portrait.jpg",
+              "alt": "演示素材：阳光穿过森林",
+              "width": 800,
+              "height": 1200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adventures",
+      "number": "02",
+      "title": "Our Adventures",
+      "subtitle": "远行 · 同行",
+      "introduction": "把沿途的风景，慢慢收藏。",
+      "color": "olive",
+      "memories": [
+        {
+          "id": "demo-02",
+          "title": "下一站的风景",
+          "story": "",
+          "photos": [
+            {
+              "id": "mountains-2",
+              "src": "/images/mountains.jpg",
+              "alt": "演示素材：远方的山峰",
+              "width": 1200,
+              "height": 800
+            },
+            {
+              "id": "coast",
+              "src": "/images/coast.jpg",
+              "alt": "演示素材：傍晚的海岸",
+              "width": 1200,
+              "height": 800
+            },
+            {
+              "id": "lake-2",
+              "src": "/images/lake.jpg",
+              "alt": "演示素材：平静的湖泊",
+              "width": 1200,
+              "height": 800
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "moments",
+      "number": "03",
+      "title": "Little Moments",
+      "subtitle": "日常 · 微光",
+      "introduction": "那些很小、却不想忘记的瞬间。",
+      "color": "rust",
+      "memories": [
+        {
+          "id": "demo-03",
+          "title": "日常的光",
+          "story": "",
+          "photos": [
+            {
+              "id": "forest-2",
+              "src": "/images/forest-portrait.jpg",
+              "alt": "演示素材：林间光影",
+              "width": 800,
+              "height": 1200
+            },
+            {
+              "id": "coast-2",
+              "src": "/images/coast.jpg",
+              "alt": "演示素材：海边日落",
+              "width": 1200,
+              "height": 800
+            },
+            {
+              "id": "lake-3",
+              "src": "/images/lake.jpg",
+              "alt": "演示素材：湖边木屋",
+              "width": 1200,
+              "height": 800
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "continued",
+      "number": "04",
+      "title": "To Be Continued",
+      "subtitle": "此刻 · 以后",
+      "introduction": "还有好多好多年，等我们一起写。",
+      "color": "charcoal",
+      "memories": [
+        {
+          "id": "demo-04",
+          "title": "未完待续",
+          "story": "",
+          "photos": [
+            {
+              "id": "coast-3",
+              "src": "/images/coast.jpg",
+              "alt": "演示素材：海边余晖",
+              "width": 1200,
+              "height": 800
+            },
+            {
+              "id": "mountains-3",
+              "src": "/images/mountains.jpg",
+              "alt": "演示素材：绵延的山峰",
+              "width": 1200,
+              "height": 800
+            },
+            {
+              "id": "forest-3",
+              "src": "/images/forest-portrait.jpg",
+              "alt": "演示素材：森林小径",
+              "width": 800,
+              "height": 1200
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "player": {
+    "frameSeconds": 8,
+    "begin": "开始放映",
+    "pause": "暂停放映",
+    "resume": "继续放映",
+    "read": "阅读完整故事",
+    "closeStory": "收起故事",
+    "noStory": "这段故事，等你亲手写下。",
+    "nextChapter": "进入下一幕",
+    "chapterEnd": "Let this moment linger.",
+    "allWatched": "The story goes on.",
+    "returnArchive": "返回胶片档案馆",
+    "replay": "再看一次完整电影",
+    "freeBrowse": "直接进入档案馆"
+  }
+}

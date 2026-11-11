@@ -1,0 +1,412 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-11T03:39:44.002565+00:00",
+  "title": "Design System: OUR STORY — The Film Archive",
+  "extensions": {
+    "colorMeta": {
+      "desk": {
+        "role": "primary",
+        "displayName": "酒红台面",
+        "tonalRamp": [
+          "oklch(15% 0.0150 3.44)",
+          "oklch(26% 0.0278 3.44)",
+          "oklch(38% 0.0385 3.44)",
+          "oklch(49% 0.0428 3.44)",
+          "oklch(61% 0.0428 3.44)",
+          "oklch(72% 0.0364 3.44)",
+          "oklch(84% 0.0235 3.44)",
+          "oklch(95% 0.0086 3.44)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "炭墨",
+        "tonalRamp": [
+          "oklch(15% 0.0014 286.02)",
+          "oklch(26% 0.0026 286.02)",
+          "oklch(38% 0.0036 286.02)",
+          "oklch(49% 0.0040 286.02)",
+          "oklch(61% 0.0040 286.02)",
+          "oklch(72% 0.0034 286.02)",
+          "oklch(84% 0.0022 286.02)",
+          "oklch(95% 0.0008 286.02)"
+        ]
+      },
+      "cream": {
+        "role": "neutral",
+        "displayName": "奶油白",
+        "tonalRamp": [
+          "oklch(15% 0.0058 79.35)",
+          "oklch(26% 0.0108 79.35)",
+          "oklch(38% 0.0150 79.35)",
+          "oklch(49% 0.0166 79.35)",
+          "oklch(61% 0.0166 79.35)",
+          "oklch(72% 0.0141 79.35)",
+          "oklch(84% 0.0091 79.35)",
+          "oklch(95% 0.0033 79.35)"
+        ]
+      },
+      "gold": {
+        "role": "primary",
+        "displayName": "旧黄铜",
+        "tonalRamp": [
+          "oklch(15% 0.0159 74.93)",
+          "oklch(26% 0.0296 74.93)",
+          "oklch(38% 0.0410 74.93)",
+          "oklch(49% 0.0455 74.93)",
+          "oklch(61% 0.0455 74.93)",
+          "oklch(72% 0.0387 74.93)",
+          "oklch(84% 0.0251 74.93)",
+          "oklch(95% 0.0091 74.93)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "褪色灰褐",
+        "tonalRamp": [
+          "oklch(15% 0.0083 49.83)",
+          "oklch(26% 0.0154 49.83)",
+          "oklch(38% 0.0213 49.83)",
+          "oklch(49% 0.0236 49.83)",
+          "oklch(61% 0.0236 49.83)",
+          "oklch(72% 0.0201 49.83)",
+          "oklch(84% 0.0130 49.83)",
+          "oklch(95% 0.0047 49.83)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "透光黄铜线",
+        "tonalRamp": [
+          "oklch(15% 0.0163 71.42)",
+          "oklch(26% 0.0302 71.42)",
+          "oklch(38% 0.0418 71.42)",
+          "oklch(49% 0.0464 71.42)",
+          "oklch(61% 0.0464 71.42)",
+          "oklch(72% 0.0395 71.42)",
+          "oklch(84% 0.0255 71.42)",
+          "oklch(95% 0.0093 71.42)"
+        ],
+        "rampNote": "以不透明基色生成的预览梯度；实际线条透明度以 DESIGN.md token 为准。"
+      },
+      "label-cream": {
+        "role": "secondary",
+        "displayName": "旧纸奶油",
+        "tonalRamp": [
+          "oklch(15% 0.0187 83.95)",
+          "oklch(26% 0.0348 83.95)",
+          "oklch(38% 0.0482 83.95)",
+          "oklch(49% 0.0535 83.95)",
+          "oklch(61% 0.0535 83.95)",
+          "oklch(72% 0.0455 83.95)",
+          "oklch(84% 0.0294 83.95)",
+          "oklch(95% 0.0107 83.95)"
+        ]
+      },
+      "label-olive": {
+        "role": "secondary",
+        "displayName": "橄榄纸标",
+        "tonalRamp": [
+          "oklch(15% 0.0159 117.78)",
+          "oklch(26% 0.0295 117.78)",
+          "oklch(38% 0.0409 117.78)",
+          "oklch(49% 0.0454 117.78)",
+          "oklch(61% 0.0454 117.78)",
+          "oklch(72% 0.0386 117.78)",
+          "oklch(84% 0.0250 117.78)",
+          "oklch(95% 0.0091 117.78)"
+        ]
+      },
+      "label-rust": {
+        "role": "secondary",
+        "displayName": "铁锈纸标",
+        "tonalRamp": [
+          "oklch(15% 0.0399 44.37)",
+          "oklch(26% 0.0741 44.37)",
+          "oklch(38% 0.1026 44.37)",
+          "oklch(49% 0.1140 44.37)",
+          "oklch(61% 0.1140 44.37)",
+          "oklch(72% 0.0969 44.37)",
+          "oklch(84% 0.0627 44.37)",
+          "oklch(95% 0.0228 44.37)"
+        ]
+      },
+      "label-charcoal": {
+        "role": "secondary",
+        "displayName": "炭黑纸标",
+        "tonalRamp": [
+          "oklch(15% 0.0039 156.49)",
+          "oklch(26% 0.0072 156.49)",
+          "oklch(38% 0.0099 156.49)",
+          "oklch(49% 0.0110 156.49)",
+          "oklch(61% 0.0110 156.49)",
+          "oklch(72% 0.0094 156.49)",
+          "oklch(84% 0.0061 156.49)",
+          "oklch(95% 0.0022 156.49)"
+        ]
+      },
+      "viewer-metal": {
+        "role": "neutral",
+        "displayName": "观片器金属",
+        "tonalRamp": [
+          "oklch(15% 0.0066 138.75)",
+          "oklch(26% 0.0122 138.75)",
+          "oklch(38% 0.0169 138.75)",
+          "oklch(49% 0.0188 138.75)",
+          "oklch(61% 0.0188 138.75)",
+          "oklch(72% 0.0160 138.75)",
+          "oklch(84% 0.0103 138.75)",
+          "oklch(95% 0.0038 138.75)"
+        ]
+      },
+      "film-amber": {
+        "role": "secondary",
+        "displayName": "底片琥珀",
+        "tonalRamp": [
+          "oklch(15% 0.0378 43.99)",
+          "oklch(26% 0.0701 43.99)",
+          "oklch(38% 0.0971 43.99)",
+          "oklch(49% 0.1079 43.99)",
+          "oklch(61% 0.1079 43.99)",
+          "oklch(72% 0.0917 43.99)",
+          "oklch(84% 0.0593 43.99)",
+          "oklch(95% 0.0216 43.99)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "电影片头",
+        "purpose": "Bodoni Moda 常规与斜体。"
+      },
+      "headline": {
+        "displayName": "工作台标题",
+        "purpose": "桌面两行，横屏单行。"
+      },
+      "title": {
+        "displayName": "章节标题",
+        "purpose": "胶卷展开视图。"
+      },
+      "body": {
+        "displayName": "界面基准",
+        "purpose": "Manrope 与中文系统后备字体。"
+      },
+      "label": {
+        "displayName": "短操作",
+        "purpose": "返回、跳过与铭牌文字。"
+      },
+      "caption-title": {
+        "displayName": "胶卷旁注",
+        "purpose": "工作台章节名称。"
+      }
+    },
+    "shadows": [
+      {
+        "name": "roll-cast",
+        "value": "12px 25px 10px rgba(16, 7, 10, 0.6)",
+        "property": "filter: drop-shadow",
+        "purpose": "胶卷右下落影。"
+      },
+      {
+        "name": "paper-print",
+        "value": "5px 10px 12px #190e105c",
+        "purpose": "照片纸张接触台面。"
+      },
+      {
+        "name": "viewer-structure",
+        "value": "inset 2px 3px 3px #a3a07975, inset -4px -3px 4px #070e09, 15px 28px 20px #160b108f",
+        "purpose": "观片器高光、暗边与台面落影。"
+      }
+    ],
+    "motion": [
+      {
+        "name": "default-hover",
+        "value": "0.22s",
+        "purpose": "motion.ts 已定义，当前未被组件调用。"
+      },
+      {
+        "name": "lift",
+        "value": "0.55s",
+        "purpose": "实际胶卷抬升；缓动 power3.inOut。"
+      },
+      {
+        "name": "unroll",
+        "value": "1.2s",
+        "purpose": "实际底片 scaleX 展开；缓动 power3.inOut。"
+      },
+      {
+        "name": "default-settle",
+        "value": "0.65s",
+        "purpose": "motion.ts 已定义，当前未被组件调用。"
+      },
+      {
+        "name": "default-ease",
+        "value": "power3.out",
+        "purpose": "motion.ts 已定义；实际调用独立覆写 easing。"
+      },
+      {
+        "name": "css-ease",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "CSS 淡入、位移、照片切换。"
+      },
+      {
+        "name": "roll-hover",
+        "value": "0.5s cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "实际 CSS 胶卷轻抬与轻转。"
+      },
+      {
+        "name": "opening-exit",
+        "value": "0.6s power2.inOut",
+        "purpose": "进入工作台前淡出片头。"
+      },
+      {
+        "name": "workbench-heading-in",
+        "value": "1s power2.out",
+        "purpose": "工作台标题入场。"
+      },
+      {
+        "name": "workbench-rolls-in",
+        "value": "1.2s power3.out; stagger 0.09s",
+        "purpose": "胶卷错峰入场。"
+      },
+      {
+        "name": "viewer-settle",
+        "value": "0.7s power3.out",
+        "purpose": "实际观片器落定，起点为时间线 1.08s。"
+      },
+      {
+        "name": "reduced-motion",
+        "value": "0.01ms CSS; JS entrance and unroll skipped",
+        "purpose": "跳过入场/展开时间线并禁止鼠标视差。"
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "wide",
+        "value": "(min-width: 1600px)"
+      },
+      {
+        "name": "medium",
+        "value": "(max-width: 1100px)"
+      },
+      {
+        "name": "portrait-fallback",
+        "value": "(max-width: 700px) and (orientation: portrait)"
+      },
+      {
+        "name": "mobile-landscape",
+        "value": "(max-height: 550px) and (orientation: landscape)"
+      },
+      {
+        "name": "desktop-unroll-spacing",
+        "value": "(min-width: 701px) and (min-height: 551px)"
+      }
+    ],
+    "focus": {
+      "outline": "2px solid var(--gold)",
+      "offset": "8px",
+      "rollOffset": "18px"
+    },
+    "grain": {
+      "opacity": 0.035,
+      "blendMode": "soft-light",
+      "note": "末尾规则覆盖 reduced-motion 内 .03；噪点是静态图片。"
+    },
+    "sourceFiles": [
+      "src/app/globals.css",
+      "src/app/layout.tsx",
+      "src/lib/motion.ts",
+      "src/components/FilmRoll.tsx",
+      "src/components/FilmWorkbench.tsx",
+      "src/components/FilmUnroll.tsx",
+      "src/components/FilmArchive.tsx"
+    ]
+  },
+  "components": [
+    {
+      "name": "开始放映",
+      "kind": "button",
+      "refersTo": "button-begin",
+      "description": "片头细线入口，悬停展开箭头间距。",
+      "html": "<button class=\"ds-begin\"><span>开始放映</span><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1\"><path d=\"M4 12h16M13 5l7 7-7 7\"/></svg></button>",
+      "css": ".ds-begin{display:inline-flex;align-items:center;gap:35px;padding:18px 8px;border:0;border-bottom:1px solid var(--gold,#c2ad91);background:none;color:var(--cream,#e9e2d7);font-family:var(--sans,sans-serif);font-size:10px;letter-spacing:.18em;cursor:pointer;transition:gap .3s}.ds-begin:hover{gap:50px}.ds-begin:focus-visible{outline:2px solid var(--gold,#c2ad91);outline-offset:8px;}"
+    },
+    {
+      "name": "返回 / 跳过",
+      "kind": "button",
+      "refersTo": "button-text",
+      "description": "细箭头与短文案保持低视觉重量。",
+      "html": "<button class=\"ds-text\">返回工作台<svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1\"><path d=\"M4 12h16M13 5l7 7-7 7\"/></svg></button>",
+      "css": ".ds-text{display:inline-flex;align-items:center;gap:12px;min-height:44px;padding:12px 0;border:0;background:none;color:var(--cream,#e9e2d7);font-family:var(--sans,sans-serif);font-size:11px;letter-spacing:.08em;cursor:pointer}.ds-text:hover{color:#fff1d8}.ds-text:focus-visible{outline:2px solid var(--gold,#c2ad91);outline-offset:8px;}"
+    },
+    {
+      "name": "画幅翻页",
+      "kind": "button",
+      "refersTo": "button-circle",
+      "description": "机械式细线圆按钮。",
+      "html": "<button class=\"ds-circle\" aria-label=\"下一张\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1\"><path d=\"M4 12h16M13 5l7 7-7 7\"/></svg></button>",
+      "css": ".ds-circle{display:grid;place-items:center;width:44px;height:44px;padding:0;border:1px solid var(--line,rgba(223,199,171,.22));border-radius:50%;background:none;color:var(--cream,#e9e2d7);cursor:pointer;transition:background .2s,transform .2s}.ds-circle:hover{background:rgba(226,205,174,.08);transform:translateY(-2px)}.ds-circle:focus-visible{outline:2px solid var(--gold,#c2ad91);outline-offset:8px;}"
+    },
+    {
+      "name": "档案字标",
+      "kind": "nav",
+      "refersTo": "navigation-wordmark",
+      "description": "返回片头的片名字标，附小号档案馆铭牌。",
+      "html": "<button class=\"ds-wordmark\">OUR <em>STORY</em><span>THE FILM ARCHIVE</span></button>",
+      "css": ".ds-wordmark{display:block;min-height:44px;padding:0;border:0;background:none;color:var(--cream,#e9e2d7);text-align:left;font:500 23px/1 var(--display,Georgia,serif);letter-spacing:-.035em;cursor:pointer}.ds-wordmark em{font-weight:400}.ds-wordmark span{display:block;margin-top:9px;color:var(--gold,#c2ad91);font:7px var(--sans,sans-serif);letter-spacing:.23em}.ds-wordmark:focus-visible{outline:2px solid var(--gold,#c2ad91);outline-offset:8px;}"
+    },
+    {
+      "name": "35 mm 实体胶卷",
+      "kind": "custom",
+      "refersTo": "film-roll",
+      "description": "奶油纸标示例：分层圆柱、端盖与胶尾；尺寸随场景变化。",
+      "html": "<button class=\"ds-roll-button\" aria-label=\"展开胶卷\"><span class=\"ds-roll\"><span class=\"ds-tail\"></span><span class=\"ds-spindle\"></span><span class=\"ds-body\"><span class=\"ds-label\"><small>OUR STORY <b>35 mm</b></small><em>The Beginning</em><small>ROLL 01 <b>COLOR NEGATIVE</b></small></span></span><span class=\"ds-rim ds-left\"></span><span class=\"ds-rim ds-right\"></span><span class=\"ds-end\"></span></span></button>",
+      "css": ".ds-roll-button{padding:30px 42px 30px 12px;border:0;background:none;cursor:pointer;transition:transform .5s cubic-bezier(.16,1,.3,1)}.ds-roll-button:hover{transform:translateY(-13px) rotate(-3deg)}.ds-roll-button:focus-visible{outline:2px solid var(--gold,#c2ad91);outline-offset:8px;}.ds-roll{position:relative;display:block;width:240px;height:141.6px;filter:drop-shadow(12px 25px 10px rgba(16,7,10,.6));isolation:isolate}.ds-body{position:absolute;left:7%;right:8%;top:8%;height:82%;overflow:hidden;border-radius:6% / 40%;background:linear-gradient(180deg,#302e29 0%,#141614 13%,#171a16 68%,#040604 95%);box-shadow:inset 0 3px 2px rgba(231,214,168,.2),inset 0 -5px 4px #050605}.ds-label{position:absolute;left:7%;right:6%;top:6%;height:77%;padding:7% 6% 4%;background:linear-gradient(180deg,#d0b895 0%,#eee0bd 12%,#e0cda8 48%,#b19b7a 100%);color:#403126;transform:skewY(-1deg);box-shadow:0 2px 2px #0005}.ds-label small{display:block;font:6px var(--sans,sans-serif);letter-spacing:.08em}.ds-label b{float:right;font-weight:400}.ds-label em{display:block;margin:5% 0 4%;padding-bottom:4%;border-bottom:1px solid #40312680;white-space:nowrap;font:italic 400 23px/1.15 var(--display,Georgia,serif);letter-spacing:-.03em}.ds-rim{position:absolute;top:6%;width:10%;height:86%;border-radius:42%;background:linear-gradient(90deg,#171914 0%,#c1ab78 20%,#49432c 35%,#111410 50%,#67604b 70%,#141710 91%);box-shadow:2px 1px 2px rgba(0,0,0,.7)}.ds-left{left:3.5%;z-index:3}.ds-right{right:3.5%;z-index:4;background:linear-gradient(90deg,#0d0f0d 0%,#a89973 17%,#45412e 30%,#050805 50%)}.ds-end{position:absolute;right:0;top:7%;height:84%;width:11%;border-radius:50%;background:radial-gradient(ellipse at 36% 35%,#282b22,#0a0c0a 65%);box-shadow:inset 2px 0 2px #7a725c,inset -3px -4px 3px #000;z-index:5}.ds-spindle{position:absolute;left:0;top:38%;width:8%;height:23%;border-radius:25%;background:linear-gradient(#292b22,#0b0d0a 75%);z-index:0}.ds-tail{position:absolute;right:-15%;top:37%;height:43%;width:35%;border-radius:0 4px 25% 0;transform:rotate(6deg);background:linear-gradient(180deg,#714633,#2d1e16 60%,#100e0c);box-shadow:3px 7px 3px #140c0d8f;z-index:-1}.ds-tail:before,.ds-tail:after{content:\"\";position:absolute;left:0;right:0;height:5px;background:repeating-linear-gradient(90deg,transparent 0 6px,#ba866c77 6px 11px,transparent 11px 17px)}.ds-tail:before{top:4px}.ds-tail:after{bottom:4px}"
+    },
+    {
+      "name": "黄铜观片器",
+      "kind": "custom",
+      "refersTo": "memory-viewer",
+      "description": "机壳、黄铜内框与底座；示例不加载演示照片。",
+      "html": "<div class=\"ds-viewer\"><div class=\"ds-viewer-top\"><span>MEMORY VIEWER</span><span>35 mm</span></div><div class=\"ds-aperture\"><div class=\"ds-photo\" aria-label=\"照片显示区域\"></div></div><div class=\"ds-viewer-bottom\"><span>OUR STORY</span><span>01 / 03</span></div><span class=\"ds-lever\"></span></div>",
+      "css": ".ds-viewer{position:relative;width:300px;height:355px;padding:17px 20px 18px;transform:rotate(-1.5deg);background:linear-gradient(110deg,#444b38,#272e25 35%,#151d18);border-radius:13px 13px 5px 5px;box-shadow:inset 2px 3px 3px #a3a07975,inset -4px -3px 4px #070e09,15px 28px 20px #160b108f}.ds-viewer:after{content:\"\";position:absolute;left:-9px;right:-9px;height:12px;bottom:-10px;background:linear-gradient(#414735,#111a12);border-bottom:2px solid #987749;box-shadow:1px 6px 6px #160c12a8}.ds-viewer-top,.ds-viewer-bottom{display:flex;justify-content:space-between;color:#c6b68c;font:7px var(--sans,sans-serif);letter-spacing:.15em}.ds-viewer-top{margin:0 1px 14px}.ds-aperture{height:267px;padding:11px;background:linear-gradient(130deg,#d5bd7f,#6b4c25 25%,#bb9853 50%,#5f4727 86%);box-shadow:0 0 0 2px #17180f,1px 3px 0 4px #77704d}.ds-photo{height:100%;background:#1a1917;box-shadow:inset 3px 5px 9px #0a0a0973}.ds-viewer-bottom{margin-top:14px;color:#c5ad7b;letter-spacing:.13em}.ds-lever{position:absolute;right:-20px;top:50%;height:85px;width:5px;background:linear-gradient(90deg,#443721,#d2b36c,#795f32);box-shadow:4px 5px 5px #130c0e}.ds-lever:before{content:\"\";position:absolute;top:13px;left:-8px;width:21px;height:21px;border-radius:50%;background:radial-gradient(circle at 30% 26%,#e3846c,#a42b23 50%,#4f1717);box-shadow:3px 4px 3px #120b0b}"
+    }
+  ],
+  "narrative": {
+    "northStar": "深夜的私人胶片工作台",
+    "overview": "以「深夜的私人胶片工作台」为视觉北极星：暗酒红台面铺满视口，真实比例的 35 mm 胶卷是可操作的主角。炭黑金属、旧纸、暖金边缘与奶油文字在同一束柔光下形成温暖而克制的收藏感。\n\n文字像电影片头与器材铭牌，照片在观片器中保持内容优先。颗粒、投影与机械动作服务于物件的可信度；不引入粉色爱心、卡通情侣或 SaaS 卡片作为视觉语言。",
+    "keyCharacteristics": [
+      "满视口酒红台面与偏暗四角。",
+      "奶油、橄榄、铁锈、炭黑四类胶卷纸标。",
+      "细衬线电影标题与小字号器材标识并置。",
+      "分层圆柱、齿孔底片与黄铜观片器构成实体入口。",
+      "桌面、手机横屏与竖屏备用各自重排。"
+    ],
+    "rules": [
+      {
+        "name": "The Material Color Rule",
+        "body": "色彩附着在台面、纸标、金属或底片等具体材料上；控件沿用暖中性色，不另建鲜艳按钮色。",
+        "section": "colors"
+      },
+      {
+        "name": "The Shared Light Rule",
+        "body": "装饰物与可操作物共用受光方向；不要将投影当成无差别悬浮装饰。",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do 保留统一光源、右下投影与真实圆柱遮挡关系。",
+      "Do 让胶卷本身承担章节入口，照片在观片器中完整显示。",
+      "Do 使用本地字体、已记录来源的本地图片与克制颗粒。",
+      "Do 同时检查桌面、移动横屏和竖屏的片头、工作台、展开状态。",
+      "Do 尊重减少动态效果与键盘焦点，让触摸先选中再展开。"
+    ],
+    "donts": [
+      "Don't 使用粉色爱心、卡通情侣或 SaaS 卡片入口。",
+      "Don't 将临时风景照片、通用文案当作两人的真实记忆。",
+      "Don't 把胶卷简化成平面矩形标签，或用互相冲突的阴影制造层次。",
+      "Don't 把横屏界面缩成桌面截图，或在竖屏强制阻止继续浏览。",
+      "Don't 将视觉原型、自动化测试通过写成真实设备或正式内容验收。"
+    ]
+  }
+}
