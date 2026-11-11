@@ -1,0 +1,60 @@
+{
+  "verifiedAt": "2026-11-11T10:04:54.435097Z",
+  "url": "http://114.55.234.248/our-story",
+  "release": {
+    "releaseId": "our-story-20261111T100339035Z-d5e47d76c6",
+    "builtAt": "2026-11-11T10:03:39.035Z",
+    "basePath": "/our-story",
+    "nodeVersion": "v24.18.0",
+    "platform": "linux-x64",
+    "gitCommit": "873006941f92162bd8ae74d429ccf945ac887b2f",
+    "workingTreeDirty": false,
+    "sourceSha256": "d5e47d76c64e07a20db270f89113c124c74639fb07997cfc5b3f0fbfd8c2cbbd",
+    "buildId": "-lMTlcQCkzIQcZX8GYNjb",
+    "seedSha256": "c7677c3e916a200a620a32112de5ceb21c42bcb0f6b3c466faf07112070b615c"
+  },
+  "artifactSha256": "cb0767e4619baacdf9ebefffd8d0e70b120107c9850e76a694d8cf348af770b8",
+  "service": {
+    "NRestarts": "0",
+    "User": "our-story",
+    "ActiveState": "active",
+    "SubState": "running",
+    "UnitFileState": "enabled",
+    "SuccessExitStatusRaw": "[unprintable]",
+    "successExitStatusFromUnit": 143
+  },
+  "serviceUnitSha256": "8377aec564797e97899ea760b73194f8ef4eb66b1e9edce57b3e85511a08bb60",
+  "currentContentSha256": "c7677c3e916a200a620a32112de5ceb21c42bcb0f6b3c466faf07112070b615c",
+  "proxyConfigSha256": "1a26a2a0cd33c67496df3ffcdb59f295e904a7d56b501a15b7e78015788b9e6f",
+  "proxyBackup": "/opt/our-story/backups/proxy-20261111T095934275912Z",
+  "publicPremiere": {
+    "enabled": true,
+    "status": "locked",
+    "serverNow": 1794391494415,
+    "opensAt": "2027-02-07T00:00:00+08:00",
+    "timeZone": "Asia/Shanghai",
+    "preview": false
+  },
+  "apiCacheControl": "no-store, max-age=0",
+  "existingRoutesUnchanged": {
+    "/": {
+      "status": 200,
+      "sha256": "4ef8cdc80edab5802aad0fc6d2fb63953dd87cea6311c63de7eb1cd25c5632cc",
+      "bytes": 882,
+      "location": null
+    },
+    "/xiaozhi/v1/": {
+      "status": 200,
+      "sha256": "4ef8cdc80edab5802aad0fc6d2fb63953dd87cea6311c63de7eb1cd25c5632cc",
+      "bytes": 882,
+      "location": null
+    },
+    "/.well-known/acme-challenge/our-story-preflight": {
+      "status": 502,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "location": null
+    }
+  },
+  "scope": "Public countdown with demo content. No admin/private media/database/real-device acceptance."
+}

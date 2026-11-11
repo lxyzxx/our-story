@@ -115,7 +115,20 @@ Phase 4 本地验收当时尚未提交或部署；本轮已获功能同步与阿
 - 外网 Chromium 三尺寸实际页面、状态接口、无缓存、字体/颗粒资源、无横向溢出均通过，截图与 passed=true/errors=[] 在 `docs/screenshots/deployment-public/`。
 - 原首页、既有 HTTP 语音路径与 ACME 测试路径的状态和内容摘要与基线一致；原容器未被重启。ACME 测试路径原本502，验证的是保持原状而非修复该服务。
 - 发布文件和 shared 内容校验正确，代理有服务器侧原文件备份和初始内容快照；未声称完成异地备份或数据库恢复演练。
-- 日志中的一次143退出来自主动版本切换的 SIGTERM，并非当前进程崩溃；部署单元正在补充正常退出分类，避免后续运维误报。当前服务 active/running，NRestarts=0。
+- 日志中的一次143退出来自主动版本切换的 SIGTERM，并非当前进程崩溃；部署单元已补充 SuccessExitStatus=143，避免后续运维误报。当前服务 active/running，NRestarts=0。
 - 本机 standalone 合成音频测试已补充原生 Audio 的 src 前缀、paused=false 与 currentTime变化检查，三尺寸均通过；仍不是正式音乐听感验收。
 
-收尾将保持本地默认构建方式，并通过显式 ARCHIVE_STANDALONE=1 生成服务器发布包；精确最终版本随后记录。
+收尾已保持本地默认构建方式，只有显式 ARCHIVE_STANDALONE=1 才生成服务器发布包。
+
+### 最终线上版本与交付
+
+- 公网入口：**http://114.55.234.248/our-story**，保留原有 IP 首页。
+- 应用提交：`873006941f92162bd8ae74d429ccf945ac887b2f`，已推送 `origin/main`；发布包从干净工作区生成。
+- 发布 ID：`our-story-20261111T100339035Z-d5e47d76c6`；包 SHA256 `cb0767e4619baacdf9ebefffd8d0e70b120107c9850e76a694d8cf348af770b8`。
+- 首映：北京时间 **2027-02-07 00:00**，最终 API locked / preview=false；额外用 preview/now 查询参数验证仍关闭，响应 no-store。
+- 最终外网三尺寸浏览器复验 passed=true / errors=[]；完整页面、API、字体/颗粒资源与布局已检查，不宣称真机 Safari 验收。
+- 默认根路径生产构建重新通过，本机 3001 正常门禁、3002 作者预览已恢复；相关原型进入/音乐面板真实关闭/旋转恢复/触摸回归 **6/6** 通过。
+- systemd active/running、开机启用、非 root 用户、NRestarts=0；最终单元与仓库校验一致，正式服务强制移除预览变量。
+- 当前重要内容 SHA 与初始种子相同，两次版本更新均未覆盖 shared 文件。初始内容备份及旧版已保留；不等于完成异地备份、数据库或真实媒体恢复演练。
+
+可机器读取的线上证据：[发布记录](releases/2026-11-11-aliyun.json)、[最终外网浏览器记录](releases/2026-11-11-public-browser-check.json)。此后提交只同步验收记录与说明，不改变上述应用包；源代码提交与文档提交分别记录。

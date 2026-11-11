@@ -44,3 +44,7 @@
 ## 首映与生日信
 
 当前首映设定为北京时间 **2027-02-07 00:00**；`premiere.enabled` 控制是否启用，`opensAt` 必须带明确时区。`finale.letter` 填亲笔信，空行分段；`signature`、`date`、`credit`、`starring` 填署名、信件日期、作者与主演。`finale.copy` 管理祝福、终幕字幕和按钮，`premiere.copy` 管理邀请函文字。完整样例及本机预览见 [premiere-guide.md](premiere-guide.md)。后台配置界面将在 Phase 5 接入，当前手动编辑服务端 JSON。
+
+## 当前已部署环境
+
+阿里云上的实际内容文件是 `/opt/our-story/shared/archive.json`，独立于发布包。首次安装从源码默认值初始化，之后发布代码不会覆盖它；需要修改线上倒计时、信件或故事时，先通过 SSH 备份并更新这个文件。操作及恢复步骤见 [aliyun-deployment.md](aliyun-deployment.md)。
